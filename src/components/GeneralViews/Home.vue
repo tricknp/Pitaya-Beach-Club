@@ -4,7 +4,7 @@
     <Header />
     <Main />
     <Menu />
-
+    <Events />
 
   </section>
 </template>
@@ -13,6 +13,8 @@
 import Header from  '../FixedComponents/Header'
 import Main   from  '../Home/Main'
 import Menu   from  '../Home/Menu'
+import Events from  '../Home/Events'
+
 export default {
 
   components:
@@ -20,6 +22,7 @@ export default {
     Header,
     Main,
     Menu,
+    Events,
   }
 
 }

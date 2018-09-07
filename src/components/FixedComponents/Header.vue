@@ -5,7 +5,7 @@
 
     <nav class="head__items">
       <router-link v-for="(item, index) in items" :key="index" :to="{ name: '' }" class="head__items--item">
-        <div class="aa" @click="activeItem(index)">
+        <div class="active-item" @click="activeItem(index)">
           <span>{{item.name}}</span>
           <span :class="{mark: item.active}"></span>
         </div>

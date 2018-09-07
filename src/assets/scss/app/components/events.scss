@@ -1,0 +1,61 @@
+.events
+{
+  width: 100%;
+  height: 100vh;
+  margin-top: 3em;
+
+  &__title
+  {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: #d90f3e;
+    text-align: center;
+  }
+
+  &__container
+  {
+    width: calc(100% - 5em);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__card
+    {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 31.8%;
+      padding: 1em 0;
+      margin-top: 3%;
+      box-shadow: 1px 4px 3px #ccc;
+
+      &--img
+      {
+        width: 100%;
+        height: 60%;
+      }
+
+      &--text
+      {
+        margin: 2%;
+        .title { font-size: 1.6em}
+        .date  { font-size: 1em }
+      }
+
+      &--btn
+      {
+        font-size: 1.8em;
+        background: #3869fc;
+        color: #fff;
+        width: 6em;
+        padding: .5em 1em;
+        position: absolute;
+        right: 2.5%;
+        bottom: 2.5%;
+        border-radius: 50px
+      }
+    }
+  }
+}

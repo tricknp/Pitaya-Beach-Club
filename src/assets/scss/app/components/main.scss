@@ -32,7 +32,11 @@
       .title  { color: #fcc449; font-size: 2em;}
       .slogan { color: #c7c2c1; font-size: 1.3em; }
 
-      p { font-size: 1.1em }
+      p, b
+      {
+        font-size: 1.1em;
+        color: #999;
+      }
 
       p:nth-child(2){ margin-top: 1.5% }
       p:nth-child(4){ margin-bottom: 1.5% }
