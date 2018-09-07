@@ -1,4 +1,11 @@
-@import 'app/header';
+
+@import 'app/views/home';
+
+@import 'app/components/main';
+@import 'app/components/menu';
+@import 'app/components/header';
+
+
 
 
 *
@@ -7,8 +14,8 @@
   padding: 0;
   box-sizing: border-box;
   color: #333;
-  font-family: Main;
-  font-family: sans-serif; 
+  // font-family: Main;
+  font-family: sans-serif;
 }
 
 a { text-decoration: none }

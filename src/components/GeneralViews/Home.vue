@@ -1,21 +1,26 @@
 <template>
-  <section>
-    
-    <Header />
+  <section class="home-page">
 
-    <main>
-      <img src="../../../static/images/hotel-generic.jpg" class="home-bg">
-    </main>
+    <Header />
+    <Main />
+    <Menu />
+
 
   </section>
 </template>
 
 <script>
-import Header from '../FixedComponents/Header'
-
+import Header from  '../FixedComponents/Header'
+import Main   from  '../Home/Main'
+import Menu   from  '../Home/Menu'
 export default {
 
-  components: { Header }
+  components:
+  {
+    Header,
+    Main,
+    Menu,
+  }
 
 }
 </script>
