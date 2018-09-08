@@ -1,0 +1,92 @@
+.main-footer
+{
+  background: #ddd;
+  width: 100%;
+  margin-top: 3em;
+  padding: 3em 4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+
+  &__logo
+  {
+    opacity: .4;
+    width: 13em;
+  }
+
+  &__contact
+  {
+    display: flex;
+    flex-direction: column;
+    margin-left: -3%;
+    &__item
+    {
+      &:nth-child(1){ margin: 0}
+      margin-top: 1.3em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &--text { margin-left: 1.8%;}
+      &--icon
+      {
+        fill: rgba(0, 0, 0, .4);
+        width: 2.7em;
+      }
+    }
+  }
+
+  &__navigation
+  {
+    display: flex;
+    flex-direction: column;
+
+    &--title
+    {
+      color: rgba(0, 0, 0, .6);
+      font-size: 2.8em;
+      font-weight: 400;
+    }
+
+    &--item
+    {
+      color: rgba(0, 0, 0, .4);
+      margin-top: .8em;
+    }
+  }
+
+
+  &__social
+  {
+    display: flex;
+    flex-direction: column;
+
+    &--btn
+    {
+      background: #fcc449;
+      font-size: 1.5em;
+      font-weight: 800;
+      color: #fff;
+      padding: .8em;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    &--icons
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .icon
+      {
+        width: 3em;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+}
