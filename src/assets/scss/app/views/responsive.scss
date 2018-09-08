@@ -1,0 +1,106 @@
+@media (max-width: 1680px){
+
+  .menu
+  {
+    height: 52vh;
+  }
+
+  .events__container
+  {
+    width: calc(100% - 7em);
+    &__card--btn { font-size: 1.4em }
+  }
+
+
+  .main-footer
+  {
+    padding: 3em 3.5em;
+  }
+
+}
+
+@media (max-width: 1600px){
+
+  .menu
+  {
+    margin-top: 1em;
+  }
+
+  .container__desc
+  {
+    margin-top: 1em;
+  }
+
+  .menu__container__content
+  {
+    &--icon  { width: 5.4em }
+    &--title { font-size: 2.4em }
+  }
+
+}
+
+@media (max-width: 1440px){
+  .events__container__card
+  {
+    &--btn { font-size: 1.3em }
+    &--img { height: 58% }
+    &--text
+    {
+      margin: 3% 2%;
+      .title { font-size: 1.35em }
+    }
+  }
+
+  .main-footer__logo
+  {
+    width: 11em;
+  }
+}
+
+@media (max-width: 1366px) {
+  .container__background { height: 68%}
+  .container__desc
+  {
+    height: 32%;
+    &--img { width: 8em }
+    &--text
+    {
+      .title  { font-size: 1.4em }
+      .slogan { font-size: 1.1em; }
+
+      p, b { font-size: 1em }
+
+      p:nth-child(2){ margin-top: 1.5% }
+      p:nth-child(4){ margin-bottom: 1% }
+    }
+  }
+
+  .menu
+  {
+    height: 55vh;
+  }
+
+  .events__container__card
+  {
+    &--btn { font-size: 1.050em }
+    &--img { height: 58% }
+    &--text
+    {
+      margin: 3% 2%;
+      .title { font-size: 1.25em }
+      .date  { font-size: .9em }
+    }
+  }
+
+  .main-footer
+  {
+    font-size: .8em;
+
+    &__logo { width: 10em }
+    &__navigation--title { font-size: 2em;}
+
+    .br-garopaba { display: none }
+
+  }
+
+}

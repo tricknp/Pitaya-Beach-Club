@@ -1,14 +1,14 @@
 
 
+@import 'app/components/header';
 @import 'app/components/main';
 @import 'app/components/menu';
 @import 'app/components/events';
-
-@import 'app/components/header';
 @import 'app/components/footer';
 
-@import 'app/views/home';
 
+@import 'app/views/home';
+@import 'app/views/responsive';
 
 
 
