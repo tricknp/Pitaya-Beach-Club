@@ -1,8 +1,57 @@
 <template>
   <main class="container">
-    <div class="container__background">
-      <img src="../../../static/images/hotel-generic.jpg" class="container__background--item">
-    </div>
+     <div class="container__background">
+       <!-- <img src="../../../static/images/hotel-generic.jpg" class="container__background--item"> -->
+       <div id="slider">
+
+         <div class="slides">
+
+            <!-- <div class="slider">
+              <div class="image">
+                <img :src="`data:image/png;base64,${img}`">
+              </div>
+            </div> -->
+           <div class="slider">
+             <div class="image">
+               <img src="../../../static/images/hotel-generic.jpg">
+             </div>
+           </div>
+
+           <div class="slider">
+             <div class="image">
+               <img src="http://pitayabeachclub.com.br/wp-content/uploads/elementor/thumbs/complexo-nkuu60bcrd3tbbygr6feg53em8w0cligtlinyxzu6g.jpg">
+             </div>
+           </div>
+
+           <div class="slider">
+             <div class="image">
+               <img src="https://r-ec.bstatic.com/images/hotel/max1024x768/131/131665021.jpg">
+             </div>
+           </div>
+
+           <div class="slider">
+             <div class="image">
+               <img src="https://r-ec.bstatic.com/images/hotel/max1024x768/131/131665050.jpg">
+             </div>
+           </div>
+
+         </div>
+
+
+         <div class="switch">
+           <ul>
+             <li>
+               <div class="on"></div>
+             </li>
+             <li></li>
+             <li></li>
+             <li></li>
+           </ul>
+         </div>
+       </div>
+      </div>
+
+
 
     <div class="container__desc">
         <img src="../../../static/images/logo.png" class="container__desc--img">
@@ -18,5 +67,27 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios'
+
+export default {
+
+data(){
+  return{
+    img: ''
+  }
+},
+
+created(){
+  this.getPhoto()
+},
+
+methods:{
+  getPhoto(){
+    axios.get('http://pitayabeachapi.herokuapp.com/img').then(res => {
+      this.img = res.data
+    })
+  }
+}
+
+}
 </script>
