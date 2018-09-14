@@ -4,7 +4,7 @@
     <img src="../../../static/images/black-logo.png" alt="logo" class="head__img">
 
     <nav class="head__items">
-      <router-link v-for="(item, index) in items" :key="index" :to="{ name: '' }" class="head__items--item">
+      <router-link v-for="(item, index) in items" :key="index" :to="{ name: item.route }" class="head__items--item">
         <div class="active-item" @click="activeItem(index)">
           <span>{{item.name}}</span>
           <span :class="{mark: item.active}"></span>
@@ -22,12 +22,12 @@ export default {
   data(){
     return{
       items: [
-        { name: 'Home',        route: 'Home',  active: true  },
-        { name: 'Apart Hotel', route: 'Home',  active: false },
-        { name: 'Club',        route: 'Home',  active: false },
-        { name: 'Gastronomia', route: 'Home',  active: false },
-        { name: 'Eventos',     route: 'Home',  active: false },
-        { name: 'Garopaba',    route: 'Home',  active: false },
+        { name: 'Home',        route: 'Home',        active: true  },
+        { name: 'Apart Hotel', route: 'ApartHotel',  active: false },
+        { name: 'Club',        route: 'Club',        active: false },
+        { name: 'Gastronomia', route: 'Home',        active: false },
+        { name: 'Eventos',     route: 'Home',        active: false },
+        { name: 'Garopaba',    route: 'Home',        active: false },
       ]
     }
   },
@@ -37,7 +37,7 @@ export default {
       // console.log(this.items[index].active);
       for(let i = 0; i < this.items.length; i++){
         this.items[i].active = false
-        console.log(this.items[i]);
+        // console.log(this.items[i]);
         if (index) {
           this.items[index].active = true
         }

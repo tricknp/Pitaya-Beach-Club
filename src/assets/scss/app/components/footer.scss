@@ -1,6 +1,6 @@
 .main-footer
 {
-  background: #ddd;
+  background: $light-grey;
   width: 100%;
   margin-top: 3em;
   padding: 3em 4em;
@@ -65,10 +65,10 @@
 
     &--btn
     {
-      background: #fcc449;
+      background: $gold;
       font-size: 1.5em;
       font-weight: 800;
-      color: #fff;
+      color: $white;
       padding: .8em;
       border-radius: 2px;
       cursor: pointer;

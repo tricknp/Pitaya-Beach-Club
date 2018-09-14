@@ -1,11 +1,12 @@
-
+@import 'app/_utils/variables';
 
 @import 'app/components/header';
 @import 'app/components/main';
 @import 'app/components/menu';
 @import 'app/components/events';
 @import 'app/components/footer';
-
+@import 'app/components/apart-hotel';
+@import 'app/components/rooms';
 
 @import 'app/views/home';
 @import 'app/views/responsive';

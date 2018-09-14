@@ -8,7 +8,7 @@
   {
     font-size: 2.5em;
     font-weight: 400;
-    color: #d90f3e;
+    color: $dark-pink;
     text-align: center;
   }
 
@@ -29,7 +29,7 @@
       width: 31.8%;
       padding: 1em 0;
       margin-top: 3%;
-      box-shadow: 1px 4px 3px #ccc;
+      box-shadow: 1px 4px 3px $light-shadow;
 
       &--img
       {
@@ -47,8 +47,8 @@
       &--btn
       {
         font-size: 1.8em;
-        background: #3869fc;
-        color: #fff;
+        background: $blue;
+        color: $white;
         width: 6em;
         padding: .5em 1em;
         position: absolute;

@@ -12,7 +12,7 @@
     align-items: center;
     width: 25%;
     overflow: hidden;
-    background: #113a7c;
+    background: $dark-blue;
     cursor: pointer;
 
     &__background
@@ -40,14 +40,14 @@
       &--icon
       {
         width: 8em;
-        fill: #fff;
+        fill: $white;
         margin-bottom: 1em;
       }
 
       &--title
       {
         font-size: 3em;
-        color: #fff;
+        color: $white;
         // text-shadow: 0 1px 2px #ddd;
       }
     }

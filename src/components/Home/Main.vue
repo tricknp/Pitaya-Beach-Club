@@ -6,34 +6,11 @@
 
          <div class="slides">
 
-            <!-- <div class="slider">
+            <div class="slider" v-for="img in images">
               <div class="image">
-                <img :src="`data:image/png;base64,${img}`">
+                <img :src="`data:image/png;base64,${img.base64img}`">
               </div>
-            </div> -->
-           <div class="slider">
-             <div class="image">
-               <img src="../../../static/images/hotel-generic.jpg">
-             </div>
-           </div>
-
-           <div class="slider">
-             <div class="image">
-               <img src="http://pitayabeachclub.com.br/wp-content/uploads/elementor/thumbs/complexo-nkuu60bcrd3tbbygr6feg53em8w0cligtlinyxzu6g.jpg">
-             </div>
-           </div>
-
-           <div class="slider">
-             <div class="image">
-               <img src="https://r-ec.bstatic.com/images/hotel/max1024x768/131/131665021.jpg">
-             </div>
-           </div>
-
-           <div class="slider">
-             <div class="image">
-               <img src="https://r-ec.bstatic.com/images/hotel/max1024x768/131/131665050.jpg">
-             </div>
-           </div>
+            </div>
 
          </div>
 
@@ -73,7 +50,7 @@ export default {
 
 data(){
   return{
-    img: ''
+    images: ''
   }
 },
 
@@ -83,8 +60,9 @@ created(){
 
 methods:{
   getPhoto(){
-    axios.get('http://pitayabeachapi.herokuapp.com/img').then(res => {
-      this.img = res.data
+    axios.get('http://pitayabeachapi.herokuapp.com/slider').then(res => {
+      this.images = res.data.reverse()
+      console.log(res.data[1]);
     })
   }
 }
