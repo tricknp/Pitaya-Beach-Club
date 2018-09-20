@@ -2,6 +2,8 @@
 
 @import 'app/components/header';
 @import 'app/components/main';
+@import 'app/components/description';
+@import 'app/components/last-event';
 @import 'app/components/menu';
 @import 'app/components/events';
 @import 'app/components/footer';
@@ -25,3 +27,6 @@
 
 a { text-decoration: none }
 button { border: none }
+
+input[type=number] { text-align: center }
+input[type=text] { text-indent: 10px }

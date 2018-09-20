@@ -7,7 +7,7 @@
 
   &__background
   {
-    height: 70%;
+    height: 65%;
     // position: relative;
     // background: url('../../../static/images/hotel-generic.jpg');
     // background-size: cover;
@@ -154,32 +154,109 @@
 
   }
 
-  &__desc
-  {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
+  &__check{
+    background: #e3e6e6;
+    width: 100%;
+    height: 34%;
+    display: block;
     position: relative;
-    &--img  { width: 15em }
-    &--text
+
+    &__content
     {
-      width: 52%;
-      margin-left: 5em;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      .title  { color: #fcc449; font-size: 2em;}
-      .slogan { color: #c7c2c1; font-size: 1.3em; }
-
-      p, b
+      &--title
       {
-        font-size: 1.1em;
-        color: #999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3%;
+
+        .text
+        {
+          margin-bottom: 2%;
+          font-size: 1.8em;
+          text-transform: uppercase;
+        }
+
+        .border
+        {
+          width: 40%;
+          height: 4px;
+          margin-top: 5%;
+          background: $pink;
+        }
       }
 
-      p:nth-child(2){ margin-top: 1.5% }
-      p:nth-child(4){ margin-bottom: 1.5% }
+      &--form
+      {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        margin-top: 1em;
+
+        .cf-item
+        {
+          &:nth-child(1) { margin-left: 0 }
+          margin-left: 1.3em;
+          display: flex;
+          flex-direction: column;
+
+          label
+          {
+            margin-bottom: .4em;
+            text-transform: uppercase;
+          }
+
+          .calendar {
+            border: $pink 2px solid;
+            font-size: 1em;
+            padding: .5em .2em;
+            background-image: url('https://bytebucket.org/fuoricitta/form-best-practice/raw/197f5e38bea1d53b52102b6c98e0e6b129dd6908/Examples/assets/img/calendar.png?token=b57efe00e0e5d28327a3b62e263519c284c70d53');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+          }
+
+          .in-number
+          {
+            border: $pink 2px solid;
+            font-size: 1.1em;
+            padding: .55em 0;
+          }
+        }
+
+        .check-btn
+        {
+          background: $pink;
+          color: $white;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding:.5em 2.5em;
+          border: $pink 2px solid;
+          margin-left: 1em;
+          font-size: 1.115em;
+
+        }
+      }
 
     }
+
+    &__triangle
+    {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      border-left: 49vw solid $white;
+      border-right: 49vw solid $white;
+      border-top: 6em solid #e3e6e6;
+    }
   }
+
 }

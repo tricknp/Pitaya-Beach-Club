@@ -3,6 +3,7 @@
 
     <Header />
     <Main />
+    <Description />
     <Menu />
     <Events />
     <Footer />
@@ -11,11 +12,12 @@
 </template>
 
 <script>
-import Header from  '../FixedComponents/Header'
-import Footer from  '../FixedComponents/Footer'
-import Main   from  '../Home/Main'
-import Menu   from  '../Home/Menu'
-import Events from  '../Home/Events'
+import Header       from   '../FixedComponents/Header'
+import Footer       from   '../FixedComponents/Footer'
+import Description  from   '../Home/Description'
+import Main         from   '../Home/Main'
+import Menu         from   '../Home/Menu'
+import Events       from   '../Home/LastEvent'
 
 export default {
 
@@ -25,7 +27,8 @@ export default {
     Main,
     Menu,
     Events,
-    Footer
+    Footer,
+    Description
   }
 
 }

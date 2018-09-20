@@ -28,18 +28,37 @@
        </div>
       </div>
 
+      <div class="container__check">
+        <div class="container__check__content">
 
+          <div class="container__check__content--title">
+            <h2 class="text">Check Availability</h2>
+            <span class="border"></span>
+          </div>
 
-    <div class="container__desc">
-        <img src="../../../static/images/logo.png" class="container__desc--img">
-        <div class="container__desc--text">
-          <h2 class="title">Pitaya Beach Club</h2>
-          <p>Inspirado na união dos quatro elementos, nasceu o Complexo Pitaya Beach Club.</p>
-          <p> <b>A poucos metros do mar</b>, o empreendimento tem como proposta acolher aos turistas e nativos com o melhor da hospitalidade, gastronomia, compras e entretenimento.  </p>
-          <p>Convidamos a todos para ficarem hospedados em nosso Apart Hotel e ter uma tarde de lazer em nosso Open Shopping. Deliciar-se com a culinária local do Pitaya Restaurant e a noite, vivenciar sensações únicas em nossa balada <b>Pitaya Club.</b> </p>
-          <h3 class="slogan">Tudo o que você precisa, em um só lugar.</h3>
+          <form class="container__check__content--form">
+            <span class="cf-item">
+              <label for="checkin">Check in</label>
+              <input  class="calendar" type="date" name="checkin">
+            </span>
+
+            <span class="cf-item">
+              <label for="checkin">Check Out</label>
+              <input  class="calendar" type="date" name="checkout">
+            </span>
+
+            <span class="cf-item">
+              <label for="rooms">Rooms</label>
+              <input  class="in-number" type="number" name="rooms">
+            </span>
+
+            <button class="check-btn"> Check </button>
+          </form>
+
         </div>
-    </div>
+
+        <div class="container__check__triangle"></div>
+      </div>
   </main>
 </template>
 
@@ -62,7 +81,7 @@ methods:{
   getPhoto(){
     axios.get('http://pitayabeachapi.herokuapp.com/slider').then(res => {
       this.images = res.data.reverse()
-      console.log(res.data[1]);
+      // console.log(res.data[1].base64img);
     })
   }
 }

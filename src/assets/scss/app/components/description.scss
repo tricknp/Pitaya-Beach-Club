@@ -1,0 +1,40 @@
+.description
+{
+  margin-top: 2%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &--img
+  {
+    width: 13em;
+  }
+
+  &__container
+  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    margin-top: 2%;
+
+    &--text
+    {
+      margin-top: 4%;
+      font-size: 1.25em;
+    }
+
+    .slogan { @extend .description__container--text }
+
+  }
+}
+
+.divider
+{
+  margin-top: 10%;
+  width: 8em;
+  background: $pink;
+  height: 4px;
+}
