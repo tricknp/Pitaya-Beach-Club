@@ -1,4 +1,17 @@
+.room-container
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 100%;
 
+  .room-title
+  {
+    font-size: 2.3em;
+    margin-bottom: .5em;
+  }
+}
 .box
 {
   width: 70%;
@@ -6,8 +19,8 @@
   display: flex;
   flex-direction: row;
   background: $white;
-  margin: 1em 0 3.5em 0;
-  box-shadow: 2px 3px 1px rgba(0, 0, 0, .1);
+  margin: 3em 0 3.5em 0;
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, .1);
 
   &__image
   {

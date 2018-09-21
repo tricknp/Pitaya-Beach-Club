@@ -2,18 +2,23 @@
   <section >
 
     <Header />
+
     <div class="apartHotel-page">
       <Description />
       <Rooms />
+      <Galery />
     </div>
 
+    <Footer />
   </section>
 </template>
 
 <script>
 import Header from '../FixedComponents/Header'
+import Footer from '../FixedComponents/Footer'
 import Description from '../ApartHotel/Description'
 import Rooms from '../ApartHotel/Rooms'
+import Galery from '../ApartHotel/Gallery'
 
 export default {
 
@@ -21,7 +26,9 @@ export default {
   {
     Header,
     Description,
-    Rooms
+    Rooms,
+    Galery,
+    Footer
   }
 
 }
@@ -36,6 +43,5 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f9f9f9;
   }
 </style>

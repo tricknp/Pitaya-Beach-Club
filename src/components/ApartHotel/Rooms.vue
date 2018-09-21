@@ -1,4 +1,8 @@
 <template>
+  <section class="room-container"> 
+
+  <h2 class="room-title">Escolha seu quarto</h2>
+
   <div class="box">
 
     <div class="box__image">
@@ -58,6 +62,7 @@
     </div>
 
   </div>
+</section>
 </template>
 
 <script>

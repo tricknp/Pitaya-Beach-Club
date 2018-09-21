@@ -1,32 +1,12 @@
 <template>
   <main class="container">
-     <div class="container__background">
-       <!-- <img src="../../../static/images/hotel-generic.jpg" class="container__background--item"> -->
-       <div id="slider">
 
-         <div class="slides">
+    <slider animation="fade" class="container__slider">
+       <slider-item v-for="(img, index) in images" :key="index" class="container__slider__item">
+           <img :src="`data:image/png;base64,${img.base64img}`" class="container__slider__item--img"> 
+       </slider-item>
+     </slider>
 
-            <div class="slider" v-for="img in images">
-              <div class="image">
-                <img :src="`data:image/png;base64,${img.base64img}`">
-              </div>
-            </div>
-
-         </div>
-
-
-         <div class="switch">
-           <ul>
-             <li>
-               <div class="on"></div>
-             </li>
-             <li></li>
-             <li></li>
-             <li></li>
-           </ul>
-         </div>
-       </div>
-      </div>
 
       <div class="container__check">
         <div class="container__check__content">
@@ -64,24 +44,30 @@
 
 <script>
 import axios from 'axios'
+import { Slider, SliderItem } from 'vue-easy-slider'
 
 export default {
+  components:
+  {
+    Slider,
+    SliderItem
+  },
 
-data(){
-  return{
-    images: ''
-  }
-},
+  data () {
+     return {
+       images: '',
+     }
+   },
 
-created(){
-  this.getPhoto()
-},
+   created(){
+     this.getPhoto()
+   },
 
 methods:{
   getPhoto(){
     axios.get('http://pitayabeachapi.herokuapp.com/slider').then(res => {
       this.images = res.data.reverse()
-      // console.log(res.data[1].base64img);
+      console.log(this.images);
     })
   }
 }

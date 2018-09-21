@@ -9,7 +9,7 @@
 @import 'app/components/footer';
 @import 'app/components/apart-hotel';
 @import 'app/components/rooms';
-
+@import 'app/components/banner';
 @import 'app/views/home';
 @import 'app/views/responsive';
 
@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #333;
+  color: rgba(0, 0, 0, .7);
   // font-family: Main;
   font-family: sans-serif;
 }

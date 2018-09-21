@@ -4,7 +4,7 @@
     <h1 class="last-event__title">Eventos</h1>
 
     <div class="last-event__box">
-      <img src="../../../static/images/dazaranha.jpeg" class="last-event__box__image">
+      <img src="../../../static/images/dazaranha.jpg" class="last-event__box__image">
 
       <div class="last-event__box__info">
           <h3 class="last-event__box__info--title">Dazaranha</h3>

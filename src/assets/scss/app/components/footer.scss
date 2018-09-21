@@ -2,18 +2,41 @@
 {
   background: $light-grey;
   width: 100%;
-  margin-top: 3em;
-  padding: 3em 4em;
+  margin-top: 3%;
+  padding: 3em 4em 0 4em;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  // align-items: center;
   justify-content: space-between;
   font-size: 1.1em;
 
-  &__logo
+  &__social
   {
-    opacity: .4;
-    width: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 11%;
+
+    &--logo
+    {
+      opacity: .4;
+      width: 7em;
+    }
+
+    &--icons
+    {
+      padding-top: .3em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      opacity: .4;
+      .icon
+      {
+        width: 3em;
+        cursor: pointer;
+      }
+    }
   }
 
   &__contact
@@ -21,6 +44,8 @@
     display: flex;
     flex-direction: column;
     margin-left: -3%;
+    width: 25%;
+
     &__item
     {
       &:nth-child(1){ margin: 0}
@@ -29,7 +54,11 @@
       flex-direction: row;
       align-items: center;
 
-      &--text { margin-left: 1.8%;}
+      &--text
+      {
+        margin-left: 1.8%;
+        font-weight: 700;
+      }
       &--icon
       {
         fill: rgba(0, 0, 0, .4);
@@ -46,47 +75,36 @@
     &--title
     {
       color: rgba(0, 0, 0, .6);
-      font-size: 2.8em;
+      font-size: 2.4em;
       font-weight: 400;
     }
 
     &--item
     {
       color: rgba(0, 0, 0, .4);
-      margin-top: .8em;
+      margin-top: .9em;
     }
   }
 
 
-  &__social
+  &__button
   {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     &--btn
     {
-      background: $gold;
-      font-size: 1.5em;
+      font-size: 1.8em;
       font-weight: 800;
-      color: $white;
+      color: $pink;
       padding: .8em;
       border-radius: 2px;
       cursor: pointer;
+      span
+      { color: rgba(0, 0, 0, .4) }
     }
 
-    &--icons
-    {
-      padding-top: .3em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      .icon
-      {
-        width: 3em;
-        cursor: pointer;
-      }
-    }
   }
 
 
