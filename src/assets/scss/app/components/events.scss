@@ -1,6 +1,7 @@
 .events
 {
-  width: 100%;
+
+  width: 90%;
   height: 103%;
   margin-top: 3em;
 
@@ -8,7 +9,7 @@
   {
     font-size: 2.5em;
     font-weight: 400;
-    color: $dark-pink;
+    color: $pink;
     text-align: center;
   }
 
@@ -46,7 +47,7 @@
 
       &--btn
       {
-        font-size: 1.8em;
+        font-size: 1.4em;
         background: $blue;
         color: $white;
         width: 6em;

@@ -3,7 +3,7 @@
 
     <slider animation="fade" class="container__slider">
        <slider-item v-for="(img, index) in images" :key="index" class="container__slider__item">
-           <img :src="`data:image/png;base64,${img.base64img}`" class="container__slider__item--img"> 
+           <img :src="`data:image/png;base64,${img.base64img}`" class="container__slider__item--img">
        </slider-item>
      </slider>
 
@@ -28,8 +28,8 @@
             </span>
 
             <span class="cf-item">
-              <label for="rooms">Rooms</label>
-              <input  class="in-number" type="number" name="rooms">
+              <label for="guests">Guests</label>
+              <input  class="in-number" type="number" name="guests">
             </span>
 
             <button class="check-btn"> Check </button>
@@ -65,7 +65,7 @@ export default {
 
 methods:{
   getPhoto(){
-    axios.get('http://pitayabeachapi.herokuapp.com/slider').then(res => {
+    axios.get('http://pitayabeachapi.herokuapp.com/home/slider').then(res => {
       this.images = res.data.reverse()
       console.log(this.images);
     })

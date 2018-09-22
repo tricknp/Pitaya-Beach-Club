@@ -1,13 +1,11 @@
 <template>
-  <section >
+  <section>
 
     <Header />
 
-    <div class="club-page">
+    <div class="gastronomy-page">
       <Description />
-      <Events />
-      <Photos />
-      <YourEvent />
+
     </div>
 
     <Footer />
@@ -18,31 +16,23 @@
 <script>
 import Header from '../FixedComponents/Header'
 import Footer from '../FixedComponents/Footer'
-import Description from '../Club/Description'
-import Events from '../Club/Event'
-import Photos from '../Club/Photos'
-import YourEvent from '../Club/YourEvent'
+import Description from '../Gastronomy/Description'
 
 export default {
-
   components:
   {
     Header,
     Description,
-    Events,
-    Photos,
-    YourEvent,
     Footer
   }
-
 }
 </script>
 
-<style>
-  .club-page
+<style media="screen">
+  .gastronomy-page
   {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

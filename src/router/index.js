@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home         from '@/components/GeneralViews/Home'
 import ApartHotel   from '@/components/GeneralViews/ApartHotel'
 import Club         from '@/components/GeneralViews/Club'
+import Gastronomy   from '@/components/GeneralViews/Gastronomy'
 
 Vue.use(Router)
 
@@ -22,7 +23,7 @@ export default new Router({
     },
 
     {
-      path: '/apart-hotel',
+      path: '/hospedagem',
       name: 'ApartHotel',
       component: ApartHotel
     },
@@ -31,6 +32,12 @@ export default new Router({
       path: '/club',
       name: 'Club',
       component: Club
+    },
+
+    {
+      path: '/gastronomia',
+      name: 'Gastronomy',
+      component: Gastronomy
     }
 
   ]

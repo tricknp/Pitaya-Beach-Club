@@ -27,18 +27,9 @@ export default {
   data() {
    return {
      currentOffset: 0,
-     windowSize: 4,
+     windowSize: 3,
      paginationFactor: 220,
      images: '',
-     items: [
-       {name: 'Tycoon Thai', tag: "Thai"},
-       {name: 'Ippudo', tag: "Japanese"},
-       {name: 'Milano', tag: "Pizza"},
-       {name: 'Tsing Tao', tag: "Chinese"},
-       {name: 'Frances', tag: "French"},
-       {name: 'Burma Superstar', tag: "Burmese"},
-       {name: 'Salt and Straw', tag: "Ice cream"},
-     ]
    }
  },
 
@@ -48,7 +39,7 @@ export default {
 
  computed: {
    atEndOfList() {
-     return this.currentOffset <= (this.paginationFactor * -1) * (this.items.length - this.windowSize);
+     return this.currentOffset <= (this.paginationFactor * -1) * (this.images.length - this.windowSize);
    },
    atHeadOfList() {
      return this.currentOffset === 0;
@@ -66,12 +57,11 @@ export default {
    },
 
    getPhoto(){
-     axios.get('http://pitayabeachapi.herokuapp.com/galery').then(res => {
+     axios.get('http://pitayabeachapi.herokuapp.com/apart/galery').then(res => {
        this.images = res.data.reverse()
        console.log(this.images);
      })
    }
-
  }
 }
 </script>
@@ -109,8 +99,8 @@ export default {
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
-    border-top: 2px solid red;
-    border-right: 2px solid purple;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
     cursor: pointer;
     margin: 0 10px;
     transition: transform 150ms linear;
@@ -162,7 +152,7 @@ export default {
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
       transition: opacity 150ms linear;
-      width: 17em;
+      width: 21em;
       height: 17em;
       object-fit: cover;
 

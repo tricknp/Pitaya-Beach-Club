@@ -23,10 +23,9 @@ export default {
     return{
       items: [
         { name: 'Home',        route: 'Home',        active: true  },
-        { name: 'Apart Hotel', route: 'ApartHotel',  active: false },
+        { name: 'Hospedagem', route: 'ApartHotel',   active: false },
         { name: 'Club',        route: 'Club',        active: false },
-        { name: 'Gastronomia', route: 'Home',        active: false },
-        { name: 'Eventos',     route: 'Home',        active: false },
+        { name: 'Gastronomia', route: 'Gastronomy',  active: false },
         { name: 'Garopaba',    route: 'Home',        active: false },
       ]
     }
