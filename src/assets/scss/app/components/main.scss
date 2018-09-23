@@ -7,7 +7,7 @@
 
   &__slider
   {
-    height: 65% !important;
+    height: 100% !important;
 
     &__item--img
     {
@@ -44,7 +44,7 @@
         .text
         {
           margin-bottom: 2%;
-          font-size: $title;
+          font-size: $subtitle;
           text-transform: uppercase;
         }
 
@@ -54,6 +54,24 @@
           height: 4px;
           margin-top: 5%;
           background: $pink;
+        }
+        .btn-check
+        {
+          z-index: 3;
+          margin-top: 15%;
+          background: $pink;
+          color: $white;
+          border-radius: 3px;
+          font-size: 1em;
+          font-weight: 500;
+          padding: .7em 1.2em;
+          border: 2px solid $pink;
+          cursor: pointer;
+          &:hover{
+            background: transparent;
+            color: $pink;
+            transition:  ease-in-out .25s;
+          }
         }
       }
 

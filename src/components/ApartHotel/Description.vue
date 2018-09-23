@@ -12,17 +12,17 @@
     </Banner>
 
 
-     <div class="apartHotel__main__text">
+     <div class="description__container">
        <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
-      <p>
+      <p class="description__container--text">
         Com 17 apartamentos localizados no coração da Praia da Ferrugem, nossas acomodações contam com um ambiente espaçoso e acolhedor. São complemento ideal para tudo que acontece em seu exterior. Assim como a fruta, o Pitaya surpreende por fora e encanta por dentro.
       </p>
 
-      <p>
+      <p class="description__container--text">
         Esse refúgio foi preparado para quem deseja recarregar suas energias. Para completar esse ciclo de lazer e relaxamento, contamos com o nosso delicioso café da manhã colonial, servido em nosso anexo, Pytaia Restaurante.
       </p>
 
-      <p>
+      <p class="description__container--text">
         <b class="last-text"> Pensamos em todos os detalhes para que sua estadia seja repleta de bons momentos e experiências únicas.</b>
       </p>
 

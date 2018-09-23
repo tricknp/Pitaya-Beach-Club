@@ -19,7 +19,7 @@
 
 
      <div class="description__container">
-       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-bc-logo">
+       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
        <h1 class="weDesign">We design your vibe</h1>
       <p class="description__container--text">
           Um mundo inteiro na mesma sintonia.
@@ -49,23 +49,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" >
-  .weDesign{
-    color: #de0d72;
-    font-size: 2.2em;
-    margin-top: 5%;
-  }
-
-  .description__container--text{
-    &:nth-child(2) { margin-top: 5% }
-    font-size: 1.3em;
-    margin-top: 2.5%;
-  }
-
-  .pitaya-bc-logo{
-    width: 10em;
-  }
-
-
-</style>

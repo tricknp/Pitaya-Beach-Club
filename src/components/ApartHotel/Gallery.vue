@@ -57,7 +57,7 @@ export default {
    },
 
    getPhoto(){
-     axios.get('http://pitayabeachapi.herokuapp.com/apart/galery').then(res => {
+     axios.get('http://pitayabeachapi.herokuapp.com/apart/gallery').then(res => {
        this.images = res.data.reverse()
        console.log(this.images);
      })

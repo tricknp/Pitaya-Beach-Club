@@ -8,7 +8,7 @@
 
   &--img
   {
-    width: 13em;
+    width: 12em;
   }
 
   &__container
@@ -22,13 +22,23 @@
 
     &--text
     {
-      margin-top: 4%;
+      margin-top: 2%;
       font-size: $text;
     }
 
-    .slogan { @extend .description__container--text }
+    .slogan
+    {
+      margin-top: 4%;
+      font-size: $text + .115em;
+    }
 
   }
+}
+
+.weDesign{
+  color: $pink;
+  font-size: $title;
+  margin-top: 3%;
 }
 
 .divider

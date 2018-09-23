@@ -18,16 +18,17 @@
     position: absolute;
     z-index: 9999;
     text-align: center;
+    margin-top: 2%;
 
     &--icon{
-      width: 5em;
+      width: 4em;
       fill: $white;
       margin-bottom: 2%;
     }
 
     &--title{
       color: $white;
-      font-size: $title + 1em;
+      font-size: $title + .5em;
       font-weight: $bold;
      }
   }

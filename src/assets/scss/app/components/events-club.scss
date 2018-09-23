@@ -74,7 +74,7 @@
 
       &--name
       {
-        font-size: 2em;
+        font-size: $subtitle + .25em;
         font-weight: 400;
         margin-bottom: 1em;
         margin-top: 10%;
@@ -84,7 +84,7 @@
       &--desc
       {
         width: 60%;
-        font-size: $text + .225em;
+        font-size: $text + .1em;
         color: rgba(0, 0, 0, .4);
       }
     }
