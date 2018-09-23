@@ -5,6 +5,8 @@ import router from './router'
 
 import './assets/scss/index.scss'
 
+import './middleware/auth'
+
 
 Vue.config.productionTip = false
 
