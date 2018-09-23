@@ -27,7 +27,8 @@
 
 @media ( max-width: 1366px ){
   .head { padding: .3em 1em }
-  .active-item > .mark { top: 2.5em }
+  .head__img { width: 3em;}
+  .active-item > .mark { top: 2.3em }
 
   .last-event__box { height: 15em }
   .room-container > .box { width: 60%}

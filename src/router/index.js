@@ -5,6 +5,10 @@ import Home         from '@/components/GeneralViews/Home'
 import ApartHotel   from '@/components/GeneralViews/ApartHotel'
 import Club         from '@/components/GeneralViews/Club'
 import Gastronomy   from '@/components/GeneralViews/Gastronomy'
+import Garopaba     from '@/components/GeneralViews/Garopaba'
+import Admin        from '@/components/GeneralViews/Admin'
+import Login        from '@/components/Authentication/Login'
+
 
 Vue.use(Router)
 
@@ -14,6 +18,18 @@ export default new Router({
     {
       path: '/',
       redirect: '/home'
+    },
+
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
     },
 
     {
@@ -38,7 +54,13 @@ export default new Router({
       path: '/gastronomia',
       name: 'Gastronomy',
       component: Gastronomy
-    }
+    },
+
+    {
+      path: '/garopaba',
+      name: 'Garopaba',
+      component: Garopaba
+    },
 
   ]
 })

@@ -20,12 +20,15 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: relative;
-
     &--item{
+      
       &:nth-child(1){
         margin: 0;
         border: none;
       }
+
+
+      font-size: .9em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -48,12 +51,18 @@
 
   &__btn{
     background: $black;
-    font-size: 1em;
+    font-size: .95em;
     font-weight: $bold;
     color: $white;
-    padding: .8em;
+    padding: .7em .8em;
     border-radius: 2px;
+    border: $black 2px solid;
     cursor: pointer;
+    &:hover{
+      background: transparent;
+      color: $black;
+      transition: all ease .3s;
+    }
   }
 }
 
