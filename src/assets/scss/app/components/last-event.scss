@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 68vh;
+  height: 68%;
   margin-top: 5%;
 
   &__title
   {
-    font-size: 2.5em;
+    font-size: $title;
     color: $pink;
     text-transform: uppercase;
   }
@@ -41,13 +41,13 @@
     &--title
     {
       text-transform: uppercase;
-      font-size: 1.6em;
+      font-size: $subtitle;
       margin-bottom: .6em;
     }
 
     &--date
     {
-      font-size: 1.1em;
+      font-size: $text;
       text-transform: uppercase;
       margin-bottom: .8em;
       &:nth-child(2) { margin: 0 }
@@ -57,7 +57,7 @@
     {
       background: $black;
       color: $white;
-      font-size: 1.115em;
+      font-size: $text;
       text-transform: uppercase;
       padding: .6em 1em;
     }
@@ -76,13 +76,13 @@
     &--title
     {
       color: $pink;
-      font-size: 2em;
+      font-size: $subtitle;
     }
 
     &--paragraph
     {
       &:nth-child(2) { margin-top: 2em }
-      font-size: 1.3em;
+      font-size: $text;
       margin-top: 1em;
       color: rgba(0, 0, 0, .6);
     }

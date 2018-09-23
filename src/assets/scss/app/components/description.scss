@@ -1,7 +1,7 @@
 .description
 {
-  margin-top: 2%;
-  height: 60vh;
+  margin-top: 1%;
+  height: 60%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,7 +23,7 @@
     &--text
     {
       margin-top: 4%;
-      font-size: 1.25em;
+      font-size: $text;
     }
 
     .slogan { @extend .description__container--text }

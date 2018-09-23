@@ -8,13 +8,13 @@
 
   .room-title
   {
-    font-size: 2.3em;
+    font-size: $title;
     margin-bottom: .5em;
   }
 }
 .box
 {
-  width: 70%;
+  width: 55%;
   height: 30em;
   display: flex;
   flex-direction: row;
@@ -24,7 +24,7 @@
 
   &__image
   {
-    width: 45%;
+    width: 55%;
     &--photo
     {
       width: 100%;
@@ -43,7 +43,7 @@
 
     &__title
     {
-      font-size: 2em;
+      font-size: $title;
     }
 
     &__item
@@ -84,15 +84,15 @@
     {
       b{ color: $brown }
       color: $brown;
-      font-size: 2.5em;
-      .small-text { font-size: .55em;}
+      font-size: $title + .3em;
+      .small-text { font-size: .65em;}
     }
 
     &--btn
     {
       background: transparent;
-      font-size: 1.5em;
-      font-weight: 800;
+      font-size: $subtitle;
+      font-weight: $bold;
       color: $brown;
     }
   }

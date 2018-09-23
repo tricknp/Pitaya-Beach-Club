@@ -2,8 +2,11 @@
   <main class="container">
 
     <slider animation="fade" class="container__slider">
-       <slider-item v-for="(img, index) in images" :key="index" class="container__slider__item">
+       <!-- <slider-item v-for="(img, index) in images" :key="index" class="container__slider__item">
            <img :src="`data:image/png;base64,${img.base64img}`" class="container__slider__item--img">
+       </slider-item> -->
+       <slider-item class="container__slider__item">
+         <img src="../../../static/images/menu_item-2.jpg" class="container__slider__item--img">
        </slider-item>
      </slider>
 
