@@ -7,6 +7,8 @@ import './assets/scss/index.scss'
 
 import './middleware/auth'
 
+import './service/api'
+
 
 Vue.config.productionTip = false
 

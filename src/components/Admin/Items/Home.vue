@@ -13,14 +13,9 @@
 
         <div class="adminSlider__images">
           <div class="adminSlider__images__content">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
+
+            <img v-if="imagesLoaded" v-for="(img, index) in images" :key="index" class="adminSlider__images__content--img"
+             :src="`data:image/png;base64,${img.base64img}`">
           </div>
         </div>
 
@@ -42,6 +37,28 @@
 </template>
 
 <script>
+
+import {homeService} from '../../../service/api.js';
+
 export default {
+  data () {
+     return {
+       images: '',
+       imagesLoaded: false
+     }
+   },
+
+   created(){
+     this.getPhoto()
+   },
+
+methods:{
+  getPhoto(){
+    homeService.slider.get((data) => {
+      this.images = data.reverse();
+      this.imagesLoaded = true;
+    })
+  }
+}
 }
 </script>
