@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  
   &--img
   {
     width: 12em;
@@ -47,4 +47,10 @@
   width: 8em;
   background: $pink;
   height: 5px;
+}
+
+.pitaya-logo
+{
+  width: 9em;
+  margin-top: -5%;
 }

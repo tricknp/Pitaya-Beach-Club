@@ -1,6 +1,7 @@
 .head
 {
   position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,7 +22,7 @@
     flex-wrap: nowrap;
     position: relative;
     &--item{
-      
+
       &:nth-child(1){
         margin: 0;
         border: none;

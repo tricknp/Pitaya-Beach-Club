@@ -14,7 +14,6 @@
       </div>
     </Banner>
 
-
      <div class="description__container">
        <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
       <p class="description__container--text">

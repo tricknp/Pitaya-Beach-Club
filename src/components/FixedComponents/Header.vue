@@ -1,7 +1,9 @@
 <template>
   <header class="head">
 
-    <img src="../../../static/images/black-logo.png" alt="logo" class="head__img">
+    <router-link :to="{ name: 'Home' }">
+      <img src="../../../static/images/black-logo.png" alt="logo" class="head__img">
+    </router-link>
 
     <nav class="head__items">
       <router-link v-for="(item, index) in items" :key="index" :to="{ name: item.route }" class="head__items--item">
@@ -12,7 +14,8 @@
       </router-link>
     </nav>
 
-    <button class="head__btn">Book Now</button>
+    <button v-if="!isLoged" class="head__btn">Book Now</button>
+    <button v-else class="head__btn" @click="logoff"> Sair </button>
 
   </header>
 </template>
@@ -31,6 +34,16 @@ export default {
     }
   },
 
+  computed:{
+    isLoged: () => {
+      if (localStorage.token.length > 10) {
+        return true
+      }else{
+        return false
+      }
+    }
+  },
+
   methods: {
     activeItem(index){
       // console.log(this.items[index].active);
@@ -41,6 +54,11 @@ export default {
           this.items[index].active = true
         }
       }
+    },
+
+    logoff(){
+      localStorage.clear()
+      this.$router.push('/')
     }
 
   }
