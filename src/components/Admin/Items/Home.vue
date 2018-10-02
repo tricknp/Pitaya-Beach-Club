@@ -26,12 +26,11 @@
 
       </div>
 
-      <div class="adminSlider">
+      <div class="adminSlider br">
         <div class="adminSlider__head">
-          <h2 class="adminSlider__head--title">Slider</h2>
+          <h2 class="adminSlider__head--title">Descrição</h2>
           <span class="adminSlider__head__buttons">
-            <button class="adminSlider__head__buttons--btn" >+</button>
-            <button class="adminSlider__head__buttons--btn" >-</button>
+            <button class="adminSlider__head__buttons--edit" >Editar</button>
           </span>
         </div>
 

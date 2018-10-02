@@ -96,7 +96,7 @@
         &--title
         {
           color: $medium-grey;
-          font-size: $title;
+          font-size: $subtitle;
         }
 
         &__buttons
@@ -115,6 +115,15 @@
             background: transparent;
             width: 1em;
           }
+
+          &--edit
+          {
+            font-size: $text;
+            background: transparent;
+            color: $dark-blue;
+            cursor: pointer;
+
+          }
         }
       }
 
@@ -132,7 +141,9 @@
           display: flex;
           flex-direction: row;
           width: 100%;
+          height: 12em;
           overflow: auto;
+
 
           &--img
           {
@@ -141,8 +152,28 @@
             height: 100%;
             margin-left: 1%;
           }
+
+          &--f-img
+          {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
+
+    textarea
+    {
+      resize: none;
+      border: 2px solid $medium-grey;
+      text-indent: 5px;
+      font-size: $text;
+      height: 10em;
+    }
+
   }
 }
+
+.br { margin-top: 5% }
+.bb { margin-bottom: 5% }
