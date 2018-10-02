@@ -57,3 +57,15 @@ export default {
 
 }
 </script>
+
+<style >
+  .description__container
+  {
+    margin-top: .5%;
+  }
+
+  .description__container--text{
+    font-size: .9em;
+  }
+
+</style>

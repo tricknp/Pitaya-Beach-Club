@@ -29,7 +29,8 @@ export default {
         { name: 'Hospedagem', route: 'ApartHotel',   active: false },
         { name: 'Club',        route: 'Club',        active: false },
         { name: 'Gastronomia', route: 'Gastronomy',  active: false },
-        { name: 'Garopaba',    route: 'Garopaba',        active: false },
+        { name: 'Garopaba',    route: 'Garopaba',    active: false },
+        { name: 'Shopping',    route: 'Shopping',    active: false },
       ]
     }
   },

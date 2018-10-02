@@ -148,9 +148,14 @@
           &--img
           {
             &:nth-child(1){ margin: 0}
-            width: 100%;
+            width: 40%;
             height: 100%;
             margin-left: 1%;
+          }
+
+          .imageSelected{
+            border: 4px solid #121e30;
+            opacity: .6;
           }
 
           &--f-img

@@ -29,7 +29,7 @@
         <textarea>aqui vai a descrição da home</textarea>
       </div>
 
-      <div class="adminSlider br">
+      <div class="adminSlider br bb">
 
         <div class="adminSlider__head">
           <h2 class="adminSlider__head--title">Quarto</h2>

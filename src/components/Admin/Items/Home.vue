@@ -13,14 +13,14 @@
 
         <div class="adminSlider__images">
           <div class="adminSlider__images__content">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
-            <img class="adminSlider__images__content--img" src="../../../../static/images/gallery.jpg">
+            <img
+              v-for="(img, index) in slider"
+              :key="index"
+              class="adminSlider__images__content--img"
+              @click="selectPhoto(index)"
+              ref="sliderImage"
+              :src="`data:image/png;base64,${img.base64img}`"
+            >
           </div>
         </div>
 
@@ -42,6 +42,45 @@
 </template>
 
 <script>
+import baseURL from '../../_mixins/url'
+import axios from 'axios'
+
 export default {
+
+  mixins: [ baseURL ],
+
+  data(){
+    return{
+      lastClicked:  '',
+      selected: [ { item: '' }],
+      slider: '',
+      description: '',
+    }
+  },
+
+  created(){
+    this.getSlider()
+    this.getDesc()
+  },
+
+  methods: {
+    getSlider(){
+      axios.get(`${this.baseURL}home/slider`).then(res => {
+        this.slider = res.data
+      })
+    },
+
+    getDesc(){
+      axios.get(`${this.baseURL}home/desc`).then(res => {
+
+      })
+    },
+
+    selectPhoto(index){
+      this.lastClicked = index
+      this.$refs.sliderImage[index].classList.toggle('imageSelected')
+    }
+  }
+
 }
 </script>
