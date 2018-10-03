@@ -32,26 +32,22 @@
 
         <modal v-if="inputFileModal">
           <h4 slot="header">Selecione uma foto para enviar.</h4>
-          <input slot="content" type="file" accept="image/x-png,image/jpeg,image/jpg" id="file" multiple>
+          <input slot="content" type="file" accept="image/x-png,image/jpeg,image/jpg" class="modal--btn-file" id="file" multiple>
           <div slot="footer">
-            <div>
-              <button class="modal-default-button" @click="newSlider">enviar</button>
-            </div>
-            <div>
-              <button class="modal-default-button" @click="inputFileModal=false">cancelar</button>
+            <div class="modalBtn">
+              <button class="modalBtn--btn" @click="newSlider">enviar</button>
+              <button class="modalBtn--btn" @click="inputFileModal=false">cancelar</button>
             </div>
           </div>
         </modal>
 
         <modal v-if="confirmModal">
-          <h1 slot="header">Prosseguir?</h1>
+          <h1 slot="header">Tem certeza que deseja excluir?</h1>
           <div slot="content"></div>
           <div slot="footer">
-            <div>
-              <button class="modal-default-button" @click="confirm">SIM</button>
-            </div>
-            <div>
-              <button class="modal-default-button" @click="confirmModal=false">CANCELAR</button>
+            <div class="modalBtn">
+              <button class="modalBtn--btn" @click="confirm">Sim</button>
+              <button class="modalBtn--btn" @click="confirmModal=false">Não</button>
             </div>
           </div>
         </modal>

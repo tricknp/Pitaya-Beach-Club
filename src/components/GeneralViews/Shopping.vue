@@ -5,6 +5,7 @@
 
     <div class="club-page">
       <Description />
+      <Gallery />
     </div>
 
     <Footer />
@@ -16,7 +17,7 @@
 import Header from '../FixedComponents/Header'
 import Footer from '../FixedComponents/Footer'
 import Description from '../Shopping/Description'
-
+import Gallery from '../ApartHotel/Gallery'
 
 export default {
 
@@ -24,7 +25,8 @@ export default {
   {
     Header,
     Description,
-    Footer
+    Footer,
+    Gallery
   }
 
 }

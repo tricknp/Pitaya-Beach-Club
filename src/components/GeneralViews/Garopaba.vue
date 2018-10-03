@@ -5,6 +5,7 @@
 
     <div class="garopaba-page">
       <Description />
+      <Gallery />
     </div>
 
     <Footer />
@@ -16,13 +17,15 @@
 import Header from '../FixedComponents/Header'
 import Footer from '../FixedComponents/Footer'
 import Description from '../Garopaba/Description'
+import Gallery from '../ApartHotel/Gallery'
 
 export default {
   components:
   {
     Header,
     Description,
-    Footer
+    Footer,
+    Gallery
   }
 }
 </script>

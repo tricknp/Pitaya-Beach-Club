@@ -26,7 +26,7 @@
           </span>
         </div>
 
-        <textarea>aqui vai a descrição da home</textarea>
+        <textarea>aqui vai a descrição</textarea>
       </div>
 
       <div class="adminSlider br bb">

@@ -5,8 +5,8 @@
 
     <div class="gastronomy-page">
       <Description />
-
     </div>
+    <gallery />
 
     <Footer />
 
@@ -17,12 +17,14 @@
 import Header from '../FixedComponents/Header'
 import Footer from '../FixedComponents/Footer'
 import Description from '../Gastronomy/Description'
+import Gallery from '../ApartHotel/Gallery'
 
 export default {
   components:
   {
     Header,
     Description,
+    Gallery,
     Footer
   }
 }
@@ -37,5 +39,9 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .gg{
+    margin-top: 10%;
   }
 </style>
