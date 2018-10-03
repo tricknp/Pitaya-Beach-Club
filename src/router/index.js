@@ -7,6 +7,7 @@ import Club         from '@/components/GeneralViews/Club'
 import Gastronomy   from '@/components/GeneralViews/Gastronomy'
 import Garopaba     from '@/components/GeneralViews/Garopaba'
 import Admin        from '@/components/GeneralViews/Admin'
+import Shopping     from '@/components/GeneralViews/Shopping'
 import Login        from '@/components/Authentication/Login'
 
 
@@ -61,6 +62,12 @@ const router =  new Router({
       name: 'Garopaba',
       component: Garopaba
     },
+
+    {
+      path: 'shopping',
+      name: 'Shopping',
+      component: Shopping
+    }
 
   ]
 })

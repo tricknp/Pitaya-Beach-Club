@@ -1,0 +1,51 @@
+<template>
+  <section class="admin-home">
+    <div class="admin-home__container">
+      <div class="adminSlider">
+
+        <div class="adminSlider__head">
+          <h2 class="adminSlider__head--title">Slider</h2>
+          <span class="adminSlider__head__buttons">
+            <button class="adminSlider__head__buttons--btn" >+</button>
+            <button class="adminSlider__head__buttons--btn" >-</button>
+          </span>
+        </div>
+
+        <div class="adminSlider__images">
+          <div class="adminSlider__images__content">
+            <img
+              v-for="(img, index) in slider"
+              :key="index"
+              class="adminSlider__images__content--img"
+              @click="selectPhoto(index)"
+              ref="sliderImage"
+              :src="`data:image/png;base64,${img.base64img}`"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="adminSlider br">
+        <div class="adminSlider__head">
+          <h2 class="adminSlider__head--title">Descrição</h2>
+          <span class="adminSlider__head__buttons">
+            <button @click="updateDesc()" class="adminSlider__head__buttons--edit" >Editar</button>
+          </span>
+        </div>
+
+        <textarea v-model="description.text"></textarea>
+        <modal>
+          <h4 slot="header">Selecione uma foto para enviar.</h4>
+          <input slot="content" type="file" id="file">
+          <div slot="footer">
+            <button class="modal-default-button">enviar</button>
+
+            <button class="modal-default-button" style="margin-right: 10px">cancelar</button>
+          </div>
+        </modal>
+      </div>
+
+    </div>
+  </section>
+</template>

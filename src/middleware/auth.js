@@ -13,8 +13,8 @@ axios.interceptors.response.use(function (response) {
 
 axios.interceptors.request.use(function (config) {
   if (config.method != "GET" && !config.url.endsWith('/login')) {
-    console.log('INTERCEPTOR WORKING...');
-    console.log(config);
+    //console.log('INTERCEPTOR WORKING...');
+    //console.log(config);
     let token = localStorage.getItem('token');
     if (token) {
       config.headers.authorization = token;

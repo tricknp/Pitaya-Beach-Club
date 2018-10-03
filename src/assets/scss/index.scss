@@ -17,6 +17,7 @@
 @import 'app/components/banner';
 @import 'app/views/home';
 @import 'app/views/responsive';
+@import 'app/components/modal';
 
 
 
@@ -27,7 +28,7 @@
   box-sizing: border-box;
   color: rgba(0, 0, 0, .7);
   // font-family: Main;
-  font-family: sans-serif;
+  font-family:sans-serif;
 }
 
 a { text-decoration: none }

@@ -53,7 +53,6 @@ methods:{
   getPhoto(){
     axios.get('http://pitayabeachapi.herokuapp.com/home/slider').then(res => {
       this.images = res.data.reverse()
-      console.log(this.images);
     })
   }
 }
