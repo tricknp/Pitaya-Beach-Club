@@ -35,6 +35,40 @@
 }
 
 
-@media( max-width: 1280px ){
+@media( max-width: 800px ){
 
+  .description--img { width: 7em }
+  .description__container { width: 90% }
+
+  .menu
+  {
+    height: 10em;
+    margin-top: 10%;
+    &__container__content--icon { width: 2.2em }
+    &__container__content--title { font-size: 1.2em}
+  }
+
+  .last-event
+  {
+    margin-top: 10%;
+    &__title{ font-size: 1.2em }
+    &__box
+    {
+      width: 65%;
+      &__info--title { font-size: 1.1em }
+    }
+
+      &__text { width: 75% }
+  }
+
+  .room-container > .box { width: 90% }
+  .card-carousel--card { width: 50% }
+  .photos__container__items--item { height: 10em }
+  .yourEvent__card
+  {
+     height: 60vh;
+     &__content--desc { width: 90% }
+  }
+
+   .gs { margin-top: 10% }
 }

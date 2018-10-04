@@ -82,11 +82,11 @@
 
     <modal v-if="eventsModal">
       <h4 slot="header">Selecione uma foto para enviar.</h4>
-      <div slot="content">
-        <input type="file" ref="eventImg" accept="image/x-png,image/jpeg,image/jpg" class="modal--btn-file">
-        <input type="text" v-model="modalData.title" placeholder="titulo">
-        <input type="text" v-model="modalData.date" placeholder="02/12/2018 as 20:00">
-        <input type="text" v-model="modalData.link" placeholder="www.example.com">
+      <div slot="content" class="modalInput">
+        <input class="modalInput--input" placeholder="escolha sua foto" type="file" ref="eventImg" accept="image/x-png,image/jpeg,image/jpg">
+        <input class="modalInput--input" type="text" v-model="modalData.title" placeholder="titulo">
+        <input class="modalInput--input" type="text" v-model="modalData.date" placeholder="02/12/2018 as 20:00">
+        <input class="modalInput--input" type="text" v-model="modalData.link" placeholder="www.example.com">
       </div>
       <div slot="footer">
         <div class="modalBtn">

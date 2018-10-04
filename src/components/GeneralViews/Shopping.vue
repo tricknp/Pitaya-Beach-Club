@@ -5,7 +5,7 @@
 
     <div class="club-page">
       <Description />
-      <Gallery />
+      <Gallery class="gs" />
     </div>
 
     <Footer />
