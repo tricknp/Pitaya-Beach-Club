@@ -102,7 +102,7 @@
         multiple>
       <div slot="footer">
         <div class="modalBtn">
-          <button class="modalBtn--btn" @click="postGallery">enviar</button>
+          <button class="modalBtn--btn" @click="proceedMethod">enviar</button>
           <button class="modalBtn--btn" @click="galleryModal = false">cancelar</button>
         </div>
       </div>

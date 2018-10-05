@@ -1,5 +1,5 @@
 <template>
-<section class="admin-sec">
+<section v-if="userLoggedIn" class="admin-sec">
   <aside class="aside">
     <div class="aside__container">
 
@@ -29,15 +29,15 @@
 </template>
 
 <script>
-import Home from './Items/Home'
-import Hospedagem from './Items/Hospedagem'
-import Club from './Items/Club'
-import Gastronomia from './Items/Gastronomia'
-import Garopaba from './Items/Garopaba'
+import Home from "./Items/Home";
+import Hospedagem from "./Items/Hospedagem";
+import Club from "./Items/Club";
+import Gastronomia from "./Items/Gastronomia";
+import Garopaba from "./Items/Garopaba";
+import { verifytoken } from "../../service/verifytoken";
 
 export default {
-  components:
-  {
+  components: {
     Home,
     Hospedagem,
     Club,
@@ -45,57 +45,70 @@ export default {
     Garopaba
   },
 
-  data(){
-    return{
+  beforeCreate() {
+    verifytoken(
+      sucess => {
+        console.log('token valid.');
+        this.userLoggedIn = true;
+      },
+      err => {
+        console.log("user needs to login.");
+        this.$router.push("login");
+      }
+    );
+  },
+
+  data() {
+    return {
+      userLoggedIn: false,
       home: true,
       hospedagem: false,
       club: false,
       gastronomia: false,
-      garopaba: false,
-    }
+      garopaba: false
+    };
   },
 
-  methods:{
-    showHome(){
-      this.home = true
-      this.hospedagem = false
-      this.gastronomia = false
-      this.club = false
-      this.garopaba = false
+  methods: {
+    showHome() {
+      this.home = true;
+      this.hospedagem = false;
+      this.gastronomia = false;
+      this.club = false;
+      this.garopaba = false;
     },
 
-    showHospedagem(){
-      this.home = false
-      this.hospedagem = true
-      this.gastronomia = false
-      this.club = false
-      this.garopaba = false
+    showHospedagem() {
+      this.home = false;
+      this.hospedagem = true;
+      this.gastronomia = false;
+      this.club = false;
+      this.garopaba = false;
     },
 
-    showGastronomia(){
-      this.home = false
-      this.hospedagem = false
-      this.gastronomia = true
-      this.club = false
-      this.garopaba = false
+    showGastronomia() {
+      this.home = false;
+      this.hospedagem = false;
+      this.gastronomia = true;
+      this.club = false;
+      this.garopaba = false;
     },
 
-    showClub(){
-      this.home = false
-      this.hospedagem = false
-      this.gastronomia = false
-      this.club = true
-      this.garopaba = false
+    showClub() {
+      this.home = false;
+      this.hospedagem = false;
+      this.gastronomia = false;
+      this.club = true;
+      this.garopaba = false;
     },
 
-    showGaropaba(){
-      this.home = false
-      this.hospedagem = false
-      this.gastronomia = false
-      this.club = false
-      this.garopaba = true
-    },
-
+    showGaropaba() {
+      this.home = false;
+      this.hospedagem = false;
+      this.gastronomia = false;
+      this.club = false;
+      this.garopaba = true;
+    }
   }
-}
+};
 </script>
