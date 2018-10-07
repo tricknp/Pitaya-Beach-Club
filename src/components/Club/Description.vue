@@ -20,19 +20,29 @@
 
      <div class="description__container">
        <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
-       <h1 class="weDesign">We design your vibe</h1>
+       <!-- <h1 class="weDesign">We design your vibe</h1> -->
       <p class="description__container--text">
-          Um mundo inteiro na mesma sintonia.
+          Um mundo inteiro na mesma sintonia. <br>
+          Pitaya Club, é aonde os quatro elementos se unem.
       </p>
 
       <p class="description__container--text">
-          Pitaya Club, é aonde os quatro elementos se unem. È o espaço onde conectamos pessoas de diferentes lugares do mundo. Que buscam acima de tudo, diversão a noite toda.
       </p>
 
       <p class="description__container--text">
-          Esqueça os rotulos do lado de fora e junte-se a nós.
+        È o espaço onde conectamos pessoas de diferentes lugares do mundo.<br>
+        Que buscam acima de tudo, diversão a noite toda.
       </p>
-      <p class="description__container--text"> Deixe que a fruta do dragão guie os seus sentimentos. </p>
+
+      <p class="description__container--text">
+      </p>
+
+      <p class="description__container--text">
+          Esqueça os rotulos do lado de fora e junte-se a nós.<br>
+          Deixe que a fruta do dragão guie os seus sentimentos. 
+      </p>
+      <p class="description__container--text">
+      </p>
 
 
       <div class="divider"></div>

@@ -1,5 +1,6 @@
 <template>
   <section class="photos">
+    <h1 class="photos--title pink">We design your vibe</h1>
     <h1 class="photos--title">Galeria de fotos</h1>
     <div class="photos__container">
       <div class="photos__container__items">
@@ -21,3 +22,12 @@
 export default {
 }
 </script>
+
+<style media="screen">
+  .pink
+  {
+    color: #de0d72 !important;
+    margin-top: 5%;
+    font-size: 2em;
+  }
+</style>

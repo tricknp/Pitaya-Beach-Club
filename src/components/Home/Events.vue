@@ -1,5 +1,5 @@
 <template>
-  <section class="events">
+  <section class="events br">
 
     <h1 class="events__title">Eventos</h1>
 

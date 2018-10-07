@@ -26,9 +26,11 @@
       </div>
     </Banner>
 
+    <div class="inline-sec">
+      <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo-g">
 
-     <div class="description__container">
-       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
+     <div class="description__container justify">
+
       <p class="description__container--text">
           Presentados por Natureza
       </p>
@@ -42,9 +44,9 @@
       </p>
       <p class="description__container--text"> Das ondas perfeitas para a prática do surfe, aos mares calmos para curtir com a família até a comodidade dos muitos bares, lojas e restaurantes na orla do centro, são elas: Praia da Gamboa, Siriú, Garopaba, Preguiça, Silveira, Ferrugem, Barra, Ouvidor e Vermelha. </p>
 
-
-      <div class="divider"></div>
     </div>
+  </div>
+  <div class="divider"></div>
 
   </main>
 </template>
@@ -58,7 +60,7 @@ export default {
 }
 </script>
 
-<style >
+<style>
   .description__container
   {
     margin-top: .5%;
@@ -68,4 +70,29 @@ export default {
     font-size: .9em;
   }
 
+  .inline-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-top: 3%;
+  }
+  .description__container
+  {
+    width: 60%;
+  }
+
+  .justify{ text-align: justify; }
+
+  .pitaya-logo-g{
+    width: 13em;
+  }
+  .description__container--text
+  {
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .description__container--text:nth-child(1){ margin-bottom: -4%}
 </style>

@@ -16,7 +16,15 @@
 
 @media( max-width: 1440px ){
   .description--img { width: 8.5em}
-
+  .description__container
+  {
+    width: 40%;
+    &--text
+    {
+      &:nth-child(2){ margin-top: 6.5%; }
+    }
+    .divider{ margin-top: 8%; }
+  }
   .main-footer
   {
     font-size: .85em;
@@ -32,6 +40,13 @@
 
   .last-event__box { height: 15em }
   .room-container > .box { width: 60%}
+
+  .last-event__box
+  {
+    width: 35%;
+    height: 13em;
+  }
+
 }
 
 

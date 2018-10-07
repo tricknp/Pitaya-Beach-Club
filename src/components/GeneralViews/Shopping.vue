@@ -3,9 +3,9 @@
 
     <Header />
 
-    <div class="club-page">
+    <div class="shopping-page">
       <Description />
-      <Gallery class="gs" />
+      <Gallery class="br" />
     </div>
 
     <Footer />
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style>
-  .club-page
+  .shopping-page
   {
     width: 100%;
     height: 100%;
@@ -41,5 +41,9 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .br{
+    margin-top: 3%;
   }
 </style>

@@ -4,9 +4,17 @@
     <div class="main-footer__social">
       <img src="../../../static/images/black-logo.png" class="main-footer__social--logo">
       <div class="main-footer__social--icons">
-        <img src="../../../static/icons/insta.svg" class="icon">
-        <img src="../../../static/icons/yt.svg" class="icon">
-        <img src="../../../static/icons/fb.svg" class="icon">
+        <a href="https://www.instagram.com/pitayaclub/" target="_blank" class="icon">
+          <img src="../../../static/icons/insta.svg" class="icon">
+        </a>
+
+        <a href="https://www.facebook.com/pitayabeachclub/" target="_blank" class="icon">
+          <img src="../../../static/icons/yt.svg" class="icon">
+        </a>
+
+        <a href="https://www.facebook.com/pitayabeachclub/" target="_blank" class="icon">
+          <img src="../../../static/icons/fb.svg" class="icon">
+        </a>
       </div>
     </div>
 
@@ -38,10 +46,10 @@
 
     <nav class="main-footer__navigation">
       <h1 class="main-footer__navigation--title">Serviços</h1>
-      <router-link :to="{ name: '' }" class="main-footer__navigation--item"> Apart hotel </router-link>
-      <router-link :to="{ name: '' }" class="main-footer__navigation--item"> Clube </router-link>
-      <router-link :to="{ name: '' }" class="main-footer__navigation--item"> Gastronomia </router-link>
-      <router-link :to="{ name: '' }" class="main-footer__navigation--item"> Eventos </router-link>
+      <router-link :to="{ name: 'ApartHotel' }" class="main-footer__navigation--item"> Apart hotel </router-link>
+      <router-link :to="{ name: 'Club' }" class="main-footer__navigation--item"> Club </router-link>
+      <router-link :to="{ name: 'Gastronomy' }" class="main-footer__navigation--item"> Gastronomia </router-link>
+      <router-link :to="{ name: 'Shopping' }" class="main-footer__navigation--item"> Shopping </router-link>
     </nav>
 
     <div class="main-footer__button">

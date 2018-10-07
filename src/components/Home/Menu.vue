@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="menu br">
 
     <div class="menu__container">
         <img src="../../../static/images/menu_item-1.jpg" class="menu__container__background">

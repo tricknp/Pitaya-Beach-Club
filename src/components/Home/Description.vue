@@ -1,5 +1,5 @@
 <template>
-  <section class="description">
+  <section class="description br">
 
     <img src="../../../static/images/logo_beach_club-01.png" class="description--img">
 
