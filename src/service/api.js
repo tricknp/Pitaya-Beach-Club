@@ -25,6 +25,10 @@ export const endPoints = {
   gastroBannerUrl : baseUrl + '/gastro/banner',
   gastroDescUrl   : baseUrl + '/gastro/desc',
   gastroGalleryUrl: baseUrl + '/gastro/slider',
+
+  garopabaBannerUrl : baseUrl + '/garopaba/banner',
+  garopabaDescUrl   : baseUrl + '/garopaba/desc',
+  garopabaGalleryUrl: baseUrl + '/garopaba/slider',
 }
 
 // APIs
@@ -32,3 +36,4 @@ export const homeService = require('./home').default;
 export const clubService = require('./club').default;
 export const hospService = require('./hospedagem').default;
 export const gastroService = require('./gastronomia').default;
+export const garopabaService = require('./garopaba').default;
