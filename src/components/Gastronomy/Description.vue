@@ -2,7 +2,7 @@
   <main class="apartHotel__main">
 
     <Banner>
-      <img src="../../../static/images/menu_item-2.jpg" class="banner__bg" slot="bg">
+      <img :src="`data:image/png;base64,${banner}`" class="banner__bg" slot="bg">
       <div slot="content">
         <svg class="banner__content--icon" version="1.1" viewBox="0 0 470 470" xmlns="http://www.w3.org/2000/svg">
           <path d="m327.39 160.81c-3.292 2.515-3.922 7.222-1.407 10.513 14.076 18.423 21.515 40.443 21.515 63.678 0 57.897-47.103 105-105 105s-105-47.103-105-105 47.103-105 105-105c23.235 0 45.255 7.439 63.679 21.516 3.29 2.515 7.998 1.885 10.513-1.407 2.515-3.291 1.885-7.998-1.407-10.513-21.061-16.091-46.23-24.596-72.785-24.596-66.168 0-120 53.832-120 120s53.832 120 120 120 120-53.832 120-120c0-26.555-8.505-51.724-24.596-72.784-2.514-3.291-7.22-3.922-10.512-1.407z"/>
@@ -33,11 +33,36 @@
   </main>
 </template>
 
+
+
 <script>
+
 import Banner from '../FixedComponents/Banner'
+import axios from 'axios'
+import url from '../_mixins/url'
 
 export default {
-  components: { Banner }
+    components: { Banner },
 
-}
+    data(){
+      return{
+        banner: ''
+      }
+    },
+
+    mixins: [ url ],
+
+    created(){
+      this.getBanner()
+    },
+
+    methods:{
+      getBanner(){
+        axios.get(`${this.baseURL}gastro/banner`).then(res => {
+          this.banner = res.data[0].img
+        })
+      }
+    }
+
+  }
 </script>

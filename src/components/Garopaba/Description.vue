@@ -2,7 +2,7 @@
   <main class="apartHotel__main">
 
     <Banner>
-      <img src="../../../static/images/garopaba.jpg" class="banner__bg" slot="bg">
+      <img :src="`data:image/png;base64,${banner}`" class="banner__bg" slot="bg">
       <div slot="content">
         <svg class="banner__content--icon" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
         		<path d="m504.5 328.66c-22.118 0-33.314 4.332-44.142 8.521-9.982 3.862-19.412 7.511-38.729 7.511-19.318 0-28.747-3.648-38.73-7.511-10.827-4.189-22.023-8.521-44.142-8.521-22.105 0-33.294 4.333-44.115 8.522-9.975 3.862-19.397 7.51-38.699 7.51-19.31 0-28.735-3.648-38.713-7.51-10.824-4.19-22.016-8.522-44.127-8.522-22.104 0-33.293 4.333-44.114 8.522-9.975 3.862-19.396 7.51-38.698 7.51-19.296 0-28.715-3.648-38.687-7.51-10.818-4.19-22.004-8.522-44.104-8.522-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5c19.296 0 28.714 3.648 38.687 7.51 10.818 4.19 22.004 8.522 44.104 8.522 22.104 0 33.293-4.333 44.114-8.522 9.975-3.862 19.396-7.51 38.698-7.51 19.309 0 28.734 3.648 38.712 7.51 10.824 4.19 22.017 8.522 44.128 8.522 22.105 0 33.294-4.333 44.115-8.522 9.975-3.862 19.397-7.51 38.699-7.51 19.317 0 28.747 3.648 38.729 7.511 10.828 4.189 22.024 8.521 44.143 8.521s33.314-4.332 44.142-8.521c9.982-3.862 19.412-7.511 38.729-7.511 4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5z"/>
@@ -51,14 +51,39 @@
   </main>
 </template>
 
+
 <script>
+
 import Banner from '../FixedComponents/Banner'
+import axios from 'axios'
+import url from '../_mixins/url'
 
 export default {
-  components: { Banner }
+    components: { Banner },
 
-}
+    data(){
+      return{
+        banner: ''
+      }
+    },
+
+    mixins: [ url ],
+
+    created(){
+      this.getBanner()
+    },
+
+    methods:{
+      getBanner(){
+        axios.get(`${this.baseURL}garopaba/banner`).then(res => {
+          this.banner = res.data[0].img
+        })
+      }
+    }
+
+  }
 </script>
+
 
 <style>
   .description__container

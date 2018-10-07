@@ -2,7 +2,7 @@
   <main class="apartHotel__main">
 
     <Banner>
-      <img src="../../../static/images/club.jpg" class="banner__bg" slot="bg">
+      <img :src="`data:image/png;base64,${banner}`" class="banner__bg" slot="bg">
       <div slot="content">
         <svg class="banner__content--icon" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
             <path d="m412.85 152.47c-4.16-4.16-10.923-4.16-15.083 0l-163.12 163.12-163.11-163.12c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l170.67 170.67c2.091 2.069 4.821 3.115 7.552 3.115s5.461-1.045 7.509-3.115l170.67-170.67c4.16-4.16 4.16-10.923 0-15.083z"/>
@@ -39,7 +39,7 @@
 
       <p class="description__container--text">
           Esqueça os rotulos do lado de fora e junte-se a nós.<br>
-          Deixe que a fruta do dragão guie os seus sentimentos. 
+          Deixe que a fruta do dragão guie os seus sentimentos.
       </p>
       <p class="description__container--text">
       </p>
@@ -52,10 +52,33 @@
 </template>
 
 <script>
+
 import Banner from '../FixedComponents/Banner'
+import axios from 'axios'
+import url from '../_mixins/url'
 
 export default {
-  components: { Banner }
+    components: { Banner },
 
-}
+    data(){
+      return{
+        banner: ''
+      }
+    },
+
+    mixins: [ url ],
+
+    created(){
+      this.getBanner()
+    },
+
+    methods:{
+      getBanner(){
+        axios.get(`${this.baseURL}club/banner`).then(res => {
+          this.banner = res.data[0].img
+        })
+      }
+    }
+
+  }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <section class="room-container"> 
+  <section class="room-container">
 
   <h2 class="room-title">Escolha seu quarto</h2>
 
@@ -66,6 +66,4 @@
 </template>
 
 <script>
-export default {
-}
 </script>

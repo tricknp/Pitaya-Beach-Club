@@ -5,7 +5,7 @@
 
     <div class="garopaba-page">
       <Description />
-      <Gallery />
+      <Gallery class="btt" />
     </div>
 
     <Footer />
@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .garopaba-page
 {
   width: 100%;
@@ -40,4 +40,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+.btt{ margin-top: 7%;}
+
 </style>

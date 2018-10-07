@@ -3,18 +3,39 @@
     <img src="../../../static/images/dazaranha.jpg" class="last-event__box__image">
 
     <div class="last-event__box__info">
-        <h3 class="last-event__box__info--title">Dazaranha</h3>
-        <span class="last-event__box__info--date">13 de outubro</span>
+        <h3 class="last-event__box__info--title">{{ event.title }}</h3>
         <span class="last-event__box__info--date">Sábado | 23H</span>
-        <a href="https://minhaentrada.com.br/evento/dazaranha-garopaba-sc-11128" target="_blank" class="last-event__box__info--btn">Ingressos</a>
+        <span class="last-event__box__info--date">{{ event.date }}</span>
+        <a :href="event.link" target="_blank" class="last-event__box__info--btn">Ingressos</a>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import url from '../_mixins/url'
+
 export default {
+
+  data(){
+    return{
+      event: ''
+    }
+  },
+
+  mixins: [ url ],
+
+  created(){
+    this.getEvent()
+  },
+
+  methods:{
+     getEvent(){
+       axios.get(`${this.baseURL}club/event`).then(res => {
+         this.event = res.data[0]
+       })
+     }
+  }
+
 }
 </script>
-
-<style lang="css">
-</style>
