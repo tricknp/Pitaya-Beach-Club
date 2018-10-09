@@ -119,5 +119,5 @@ export default {
     margin-top: 2%;
   }
 
-  .description__container--text:nth-child(1){ margin-bottom: -4%}
+  /* .description__container--text:nth-child(1){ margin-bottom: -4%} */
 </style>

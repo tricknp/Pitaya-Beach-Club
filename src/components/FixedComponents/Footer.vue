@@ -8,7 +8,7 @@
           <img src="../../../static/icons/insta.svg" class="icon">
         </a>
 
-        <a href="https://www.facebook.com/pitayabeachclub/" target="_blank" class="icon">
+        <a href="https://api.whatsapp.com/send?phone=554899068181&text=Podemos%20lhe%20ajudar%3F" target="_blank" class="icon">
           <img src="../../../static/icons/yt.svg" class="icon">
         </a>
 
