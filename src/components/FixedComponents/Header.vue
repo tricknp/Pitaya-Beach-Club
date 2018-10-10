@@ -5,7 +5,7 @@
       <img src="../../../static/images/black-logo.png" alt="logo" class="head__img">
     </router-link>
 
-    <nav class="head__items">
+    <nav class="head__items" ref="nav">
       <router-link v-for="(item, index) in items" :key="index" :to="{ name: item.route }" class="head__items--item">
         <div class="active-item" @click="activeItem(index)">
           <span>{{item.name}}</span>
@@ -14,10 +14,16 @@
       </router-link>
     </nav>
 
-    <div>
-      <button v-if="isLoged" class="head__btn" @click="logoff"> Sair </button>
+    <div class="rw">
+      <button v-if="isLoged" clauss="head__btn" @click="logoff"> Sair </button>
       <button class="head__btn">Book Now</button>
+      <div class="hamburguer" @click="activeMenu">
+        <div class="line line--top"></div>
+        <div class="line line--middle"></div>
+        <div class="line line--bottom"></div>
+      </div>
     </div>
+
 
   </header>
 </template>
@@ -57,6 +63,10 @@ export default {
           this.items[index].active = true
         }
       }
+    },
+
+    activeMenu(){
+      console.log(this.$refs.nav.classList.toggle('isActive'));
     },
 
     logoff(){

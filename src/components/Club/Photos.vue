@@ -1,6 +1,6 @@
 <template>
   <section class="photos">
-    <h1 class="photos--title pink">We design your vibe</h1>
+    <!-- <h1 class="photos--title pink">We design your vibe</h1> -->
     <h1 class="photos--title">Galeria de fotos</h1>
     <div class="photos__container">
       <div class="photos__container__items">

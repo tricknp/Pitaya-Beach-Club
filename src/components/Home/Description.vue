@@ -22,18 +22,9 @@ export default {
 </script>
 
 <style media="screen">
-  .dc{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
   .description--img
   {
     width: 12em;
     margin-right: 3%;
   }
-
-  .justify { text-align: justify;}
 </style>

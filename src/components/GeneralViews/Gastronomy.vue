@@ -6,7 +6,7 @@
     <div class="gastronomy-page">
       <Description />
     </div>
-    <gallery />
+    <gallery class="br" />
 
     <Footer />
 

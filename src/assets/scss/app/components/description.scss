@@ -16,20 +16,24 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 45%;
+    height: 100%;
+    width: 50%;
     text-align: center;
     margin-top: 2%;
+
 
     &--text
     {
       margin-top: 2%;
       font-size: $text;
+      &:nth-child(1){ margin-bottom: -3%;}
     }
 
     .slogan
     {
       margin-top: 4%;
       font-size: $text + .1em;
+      width: 100%;
     }
 
   }
@@ -54,3 +58,14 @@
   width: 9em;
   margin-top: -5%;
 }
+
+
+.dc{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.justify { text-align: justify;}

@@ -19,6 +19,10 @@
 @import 'app/views/responsive';
 @import 'app/components/modal';
 
+@font-face {
+    font-family: ebrima;
+      src: url('../fonts/ebrimabd.ttf');
+}
 
 
 *
@@ -27,8 +31,8 @@
   padding: 0;
   box-sizing: border-box;
   color: rgba(0, 0, 0, .7);
-  // font-family: Main;
   font-family:sans-serif;
+  // font-family: Main;
 }
 
 a { text-decoration: none }

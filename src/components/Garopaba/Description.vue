@@ -32,7 +32,7 @@
      <div class="description__container justify">
 
       <p class="description__container--text">
-          Presentados por Natureza
+          Presenteados por Natureza
       </p>
 
       <p class="description__container--text">

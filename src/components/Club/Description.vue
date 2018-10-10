@@ -18,9 +18,9 @@
     </Banner>
 
 
-     <div class="description__container">
-       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
-       <!-- <h1 class="weDesign">We design your vibe</h1> -->
+     <div class="description__container br">
+       <!-- <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo"> -->
+       <h1 class="weDesign">We design your vibe</h1>
       <p class="description__container--text">
           Um mundo inteiro na mesma sintonia. <br>
           Pitaya Club, é aonde os quatro elementos se unem.

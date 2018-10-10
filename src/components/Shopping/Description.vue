@@ -21,8 +21,10 @@
     </Banner>
 
 
-     <div class="description__container">
-       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
+    <div class="dc">
+      <img src="../../../static/images/logo_beach_club-01.png" class="description--img">
+
+     <div class="description__container justify">
       <p class="description__container--text">
           Seu ponto de encontro com as melhores marcas e serviços.
       </p>
@@ -36,8 +38,9 @@
       </p>
 
 
-      <div class="divider"></div>
     </div>
+    </div>
+    <div class="divider"></div>
 
   </main>
 </template>

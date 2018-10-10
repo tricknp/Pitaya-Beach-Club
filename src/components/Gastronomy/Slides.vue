@@ -4,7 +4,6 @@
   <slider animation="fade" class="container__slider">
      <slider-item v-for="(img, index) in images" :key="index" class="container__slider__item">
          <img :src="`data:image/png;base64,${img.base64img}`" class="container__slider__item--img">
-         <h1>KKKKKKKK</h1>
      </slider-item>
    </slider>
 </div>

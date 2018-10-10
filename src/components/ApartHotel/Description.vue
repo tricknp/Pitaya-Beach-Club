@@ -11,9 +11,10 @@
       </div>
     </Banner>
 
+    <div class="dc br">
 
-     <div class="description__container">
-       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
+    <img src="../../../static/images/logo_beach_club-01.png" class="description--img">
+     <div class="description__container justify">
       <p class="description__container--text">
         Com 17 apartamentos localizados no coração da Praia da Ferrugem, nossas acomodações contam com um ambiente espaçoso e acolhedor. São complemento ideal para tudo que acontece em seu exterior. Assim como a fruta, o Pitaya surpreende por fora e encanta por dentro.
       </p>
@@ -25,9 +26,9 @@
       <p class="description__container--text">
         <b class="last-text"> Pensamos em todos os detalhes para que sua estadia seja repleta de bons momentos e experiências únicas.</b>
       </p>
-
-      <div class="divider"></div>
     </div>
+  </div>
+    <div class="divider"></div>
 
   </main>
 </template>
