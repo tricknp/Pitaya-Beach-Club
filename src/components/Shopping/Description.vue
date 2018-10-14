@@ -26,21 +26,13 @@
 
      <div class="description__container justify">
       <p class="description__container--text">
-          Seu ponto de encontro com as melhores marcas e serviços.
-      </p>
-
-      <p class="description__container--text">
-        Totalmente integrado à Ferrugem, o Pitaya Open Shopping segue o conceito de shoppings abertos e oferece uma boa variedade de lojas, cervejaria e petiscaria, serviços de turismo e gastronomia em um só lugar.
-      </p>
-
-      <p class="description__container--text">
-          Hóspedes e visitantes são convidados a passear por nossos jardins e desfrutar de uma seleção especial de estabelecimentos que tornarão a experiência Pitaya ainda mais inesquecível.
+          Aliando-se aos serviços de hospedagem e gastronomia, o Pitaya Open Shopping proporciona aos usuários uma experiência completa de compras e lazer.
       </p>
 
 
     </div>
     </div>
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
 
   </main>
 </template>

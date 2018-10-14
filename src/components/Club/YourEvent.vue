@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
 
     <div class="yourEvent__card">
       <div class="yourEvent__card__content">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
 
     <div class="yourEvent__card">
       <div class="yourEvent__card__image">

@@ -42,11 +42,11 @@
       <p class="description__container--text">
         Situada a apenas 90 km ao sul da movimentada Florianópolis, Garopaba conta com nove praias que servem a todos os gostos e atraem turistas de todo o país – e do mundo.
       </p>
-      <p class="description__container--text"> Das ondas perfeitas para a prática do surfe, aos mares calmos para curtir com a família até a comodidade dos muitos bares, lojas e restaurantes na orla do centro, são elas: Praia da Gamboa, Siriú, Garopaba, Preguiça, Silveira, Ferrugem, Barra, Ouvidor e Vermelha. </p>
+      <p class="description__container--text"> Das ondas perfeitas para a prática do surfe, aos mares calmos para curtir com a família até a comodidade dos muitos bares, lojas e restaurantes na orla do centro, são elas: Praia da Gamboa, Siriú, Garopaba, Preguiça, Silveira, Ferrugem, Barra, Ouvidor, Vermelha e Praia do Rosa. </p>
 
     </div>
   </div>
-  <div class="divider"></div>
+  <!-- <div class="divider"></div> -->
 
   </main>
 </template>

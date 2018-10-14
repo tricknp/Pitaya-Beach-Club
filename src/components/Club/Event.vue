@@ -4,7 +4,7 @@
   <div class="events-club__main">
     <h1 class="events-club__main--title">Proximos Eventos</h1>
     <Card />
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
   </div>
 
 

@@ -17,7 +17,7 @@
      <div class="description__container">
        <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
       <p class="description__container--text">
-          Com ambiente vibrante e moderno, o Restaurante Pitaya proporciona aos hóspedes e visitantes uma experiência completa para seu paladar.
+          Com ambiente vibrante e moderno, o espaço gastronômico Pitaya proporciona aos hóspedes e visitantes uma experiência completa para seu paladar.
       </p>
 
       <p class="description__container--text">
@@ -27,7 +27,7 @@
       <p class="description__container--text"> <b>Aberto ao público para almoço e jantar! </b> </p>
 
 
-      <div class="divider"></div>
+      <!-- <div class="divider"></div> -->
     </div>
 
   </main>

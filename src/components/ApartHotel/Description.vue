@@ -28,7 +28,7 @@
       </p>
     </div>
   </div>
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
 
   </main>
 </template>
