@@ -1,5 +1,7 @@
 import axios from 'axios';
-import {endPoints} from './api';
+import {
+  endPoints
+} from './api';
 
 export default {
   slider: {
@@ -12,7 +14,7 @@ export default {
     post(inputFile, callback) {
       let files = inputFile.files;
       let count = 0;
-      let max   = files.length;
+      let max = files.length;
       for (let index = 0; index < max; index++) {
         let formData = new FormData();
         formData.append("img", files[index]);
@@ -33,6 +35,20 @@ export default {
     }
   },
 
+  evdesc: {
+    get(callback) {
+      axios.get(endPoints.homeEvdescUrl)
+        .then(res => {
+          callback(res.data[0]);
+        })
+    },
+    put(id, data, callback) {
+      axios.put(endPoints.homeEvdescUrl + "/" + id, data)
+        .then(res => {
+          callback(res)
+        })
+    },
+  },
 
   desc: {
     get(callback) {

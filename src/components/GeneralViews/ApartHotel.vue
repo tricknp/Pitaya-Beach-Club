@@ -6,7 +6,7 @@
     <div class="apartHotel-page">
       <Description />
       <Rooms />
-      <Galery />
+      <Galery directory="/apart/gallery" />
     </div>
 
     <Footer />
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import Header from '../FixedComponents/Header'
-import Footer from '../FixedComponents/Footer'
+import Header      from '../FixedComponents/Header'
+import Footer      from '../FixedComponents/Footer'
 import Description from '../ApartHotel/Description'
-import Rooms from '../ApartHotel/Rooms'
-import Galery from '../ApartHotel/Gallery'
+import Rooms       from '../ApartHotel/Rooms'
+import Galery      from '../ApartHotel/Gallery'
 
 export default {
 

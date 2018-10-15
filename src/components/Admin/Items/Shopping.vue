@@ -81,7 +81,7 @@
 
 <script>
   import {
-    garopabaService
+    shoppingService
   } from "../../../service/api.js";
   import modal from "../../Modal";
   import tinymce from 'vue-tinymce-editor'
@@ -117,17 +117,17 @@
       // GETs
       // =============================================================================
       getGallery() {
-        garopabaService.gallery.get(gallery => {
+        shoppingService.gallery.get(gallery => {
           this.gallery = gallery;
         });
       },
       getBanner() {
-        garopabaService.banner.get(banner => {
+        shoppingService.banner.get(banner => {
           this.banner = banner[0];
         });
       },
       getDesc() {
-        garopabaService.desc.get(desc => {
+        shoppingService.desc.get(desc => {
           this.desc = desc;
         });
       },
@@ -141,7 +141,7 @@
       },
       postGallery() {
         let inputFile = this.$refs.galleryImg;
-        garopabaService.gallery.post(inputFile, res => {
+        shoppingService.gallery.post(inputFile, res => {
           this.galleryModal = false;
           this.getGallery();
         });
@@ -149,33 +149,11 @@
 
       // PUTs
       // =============================================================================
-      editRoom() {
-        this.modalData = this.room;
-        this.proceedMethod = this.putRoom;
-        this.roomModal = true;
-      },
-      putRoom() {
-        let data = {
-          inputFile: this.$refs.eventImg,
-          wifi: this.modalData.wifi,
-          coffee: this.modalData.coffee,
-          air: this.modalData.air,
-          cama: this.modalData.cama,
-          maxOcupation: this.modalData.maxOcupation,
-          perNight: this.modalData.perNight
-        };
-        garopabaService.room.put(this.room._id, data, res => {
-          this.getRoom();
-          this.roomModal = false;
-          //this.modalData = {};
-        });
-      },
-
       putBanner() {
         let data = {
           inputFile: this.$refs.galleryImg
         };
-        garopabaService.banner.put(this.modalData._id, data, res => {
+        shoppingService.banner.put(this.modalData._id, data, res => {
           this.getBanner();
           this.galleryModal = false;
         });
@@ -188,7 +166,7 @@
       },
 
       putDesc() {
-        garopabaService.desc.put(this.modalData, res => {
+        shoppingService.desc.put(this.modalData, res => {
           this.getDesc();
         });
       },
@@ -204,7 +182,7 @@
       deleteGallery() {
         let count = 0;
         this.selectedSlider.forEach(element => {
-          garopabaService.gallery.delete(this.gallery[element]._id, res => {
+          shoppingService.gallery.delete(this.gallery[element]._id, res => {
             count++;
             if (count === this.selectedSlider.length) {
               this.getGallery();

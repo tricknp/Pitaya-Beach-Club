@@ -5,7 +5,7 @@
 
     <div class="shopping-page">
       <Description />
-      <Gallery class="br" />
+      <Gallery directory="/shopping/slider" class="br"></Gallery>
     </div>
 
     <Footer />

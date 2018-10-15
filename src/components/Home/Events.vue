@@ -22,18 +22,19 @@
 </template>
 
 <script>
+
 export default {
-  data(){
-    return{
+  data() {
+    return {
       events: [
-        {title: 'Pitaya Beach Party', date: '16 de setembro, 19:30 horas.'},
-        {title: 'Pitaya Beach Party', date: '16 de setembro, 19:30 horas.'},
-        {title: 'Pitaya Beach Party', date: '16 de setembro, 19:30 horas.'},
-        {title: 'Pitaya Beach Party', date: '16 de setembro, 19:30 horas.'},
-        {title: 'Pitaya Beach Party', date: '16 de setembro, 19:30 horas.'},
-        {title: 'Pitaya Beach Party', date: '16 de setembro, 19:30 horas.'},
+        { title: "Pitaya Beach Party", date: "16 de setembro, 19:30 horas." },
+        { title: "Pitaya Beach Party", date: "16 de setembro, 19:30 horas." },
+        { title: "Pitaya Beach Party", date: "16 de setembro, 19:30 horas." },
+        { title: "Pitaya Beach Party", date: "16 de setembro, 19:30 horas." },
+        { title: "Pitaya Beach Party", date: "16 de setembro, 19:30 horas." },
+        { title: "Pitaya Beach Party", date: "16 de setembro, 19:30 horas." }
       ]
-    }
-  }
-}
+    };
+  },
+};
 </script>

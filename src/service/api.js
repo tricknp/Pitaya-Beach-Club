@@ -1,8 +1,8 @@
 // This module should center all cruds calls and configs
 
 // CONFIGs
-export const baseUrl = 'http://pitayabeachapi.herokuapp.com';
-//export const baseUrl= 'http://localhost:3000';
+//export const baseUrl = 'http://pitayabeachapi.herokuapp.com';
+export const baseUrl= 'http://localhost:3000';
 
 export const endPoints = {
 
@@ -11,6 +11,7 @@ export const endPoints = {
 
   homeSliderUrl: baseUrl + '/home/slider',
   homeDescUrl  : baseUrl + '/home/desc',
+  homeEvdescUrl: baseUrl + '/home/evdesc',
 
   clubEventsUrl : baseUrl + '/club/event',
   clubBannerUrl : baseUrl + '/club/banner',
@@ -26,6 +27,10 @@ export const endPoints = {
   gastroDescUrl   : baseUrl + '/gastro/desc',
   gastroGalleryUrl: baseUrl + '/gastro/slider',
 
+  shoppingBannerUrl : baseUrl + '/shopping/banner',
+  shoppingDescUrl   : baseUrl + '/shopping/desc',
+  shoppingGalleryUrl: baseUrl + '/shopping/slider',
+
   garopabaBannerUrl : baseUrl + '/garopaba/banner',
   garopabaDescUrl   : baseUrl + '/garopaba/desc',
   garopabaGalleryUrl: baseUrl + '/garopaba/slider',
@@ -36,4 +41,5 @@ export const homeService = require('./home').default;
 export const clubService = require('./club').default;
 export const hospService = require('./hospedagem').default;
 export const gastroService = require('./gastronomia').default;
+export const shoppingService = require('./shopping').default;
 export const garopabaService = require('./garopaba').default;

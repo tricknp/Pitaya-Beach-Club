@@ -5,10 +5,7 @@
       <img src="../../../static/images/logo_beach_club-01.png" class="description--img">
 
       <div class="description__container justify">
-        <p class="description__container--text">The Dragon Fruit - a fruta do dragão</p>
-        <p class="description__container--text"> Somos Pitaya, a flor da noite. Bonita por fora, suculenta por dentro. <br> Brotamos do dragão, do mar da Ferrugem e da beira da praia. Somos a união de elementos tropicais hospitaleiros, sustentáveis e vibrantes.</p>
-        <p class="description__container--text">O Pitaya Beach Club é um complexo que alia serviços de gastronomia, hospedagem e entretenimento. É um espaço de experiências e diversão, que acolhe turistas, nativos e locais.  </p>
-        <h3 class="slogan ">Venha conhecer a nova Ferrugem!</h3>
+        <p ref="desc" class="description__container--text"></p>
       </div>
     </div>
     <!-- <div class="divider"></div> -->
@@ -17,14 +14,35 @@
 </template>
 
 <script>
-export default{
-}
+
+import {homeService} from '../../service/api'
+
+export default {
+  created() {
+    this.getDesc();
+  },
+  methods: {
+    getDesc() {
+      homeService.desc.get(desc => {
+        this.desc = desc;
+        let nodes = this.createElementsFromHTML(desc.text);
+        nodes.forEach(element => {
+          this.$refs.desc.appendChild(element);
+        });
+      });
+    },
+    createElementsFromHTML(htmlString) {
+      var div = document.createElement("div");
+      div.innerHTML = htmlString.trim();
+      return div.childNodes;
+    }
+  }
+};
 </script>
 
 <style media="screen">
-  .description--img
-  {
-    width: 12em;
-    margin-right: 3%;
-  }
+.description--img {
+  width: 12em;
+  margin-right: 3%;
+}
 </style>

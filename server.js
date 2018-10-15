@@ -1,15 +1,30 @@
-var express = require('express')
-var path = require('path')
-var serveStatic = require('serve-static')
+const express = require('express')
+const path = require('path')
+const serveStatic = require('serve-static')
 
-var app = express()
+const port = process.env.PORT || 5000
+const app = express()
+
 app.use(serveStatic(path.join(__dirname, 'dist')))
-
-var port = process.env.PORT || 5000
 
 app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/dist/index.html');
 })
 
-app.listen(port)
-console.log('server started ' + port)
+// auto-ping
+const URL = 'http://pitaya-beach-club.herokuapp.com/';
+const http = require("http");
+setInterval(function () {
+  console.log('[auto-ping ...]');
+  http.get(URL);
+}, 300000);
+
+app.get(URL, (req, res) => {
+  console.log('[auto-ping received]');
+  res.status(200);
+});
+
+// start server
+app.listen(port, () => {
+  console.log('server on: [localhost:' + port + '] ')
+})

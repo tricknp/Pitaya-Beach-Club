@@ -28,7 +28,18 @@
           </span>
         </div>
 
-        <textarea v-model="description.text"></textarea>
+        <tinymce id="d1" v-model="description.text"></tinymce>
+
+        <div></div>
+
+        <div class="adminSlider__head">
+          <h2 class="adminSlider__head--title">Faça seu evento (descrição)</h2>
+          <span class="adminSlider__head__buttons">
+            <button @click="proceed(updateEvdesc)" class="adminSlider__head__buttons--edit">Salvar descrição</button>
+          </span>
+        </div>
+
+        <tinymce id="d2" v-model="evdescription.text"></tinymce>
 
         <modal v-if="inputFileModal">
           <h4 slot="header">Selecione uma foto para enviar.</h4>
@@ -42,7 +53,7 @@
         </modal>
 
         <modal v-if="confirmModal">
-          <h1 slot="header">Tem certeza que deseja excluir?</h1>
+          <h1 slot="header">Confirmar alteração?</h1>
           <div slot="content"></div>
           <div slot="footer">
             <div class="modalBtn">
@@ -62,10 +73,13 @@
 import baseURL from "../../_mixins/url";
 import { homeService } from "../../../service/api.js";
 import modal from "../../Modal";
+import tinymce from 'vue-tinymce-editor'
+
 
 export default {
   components: {
-    modal
+    modal,
+    tinymce
   },
 
   data() {
@@ -73,6 +87,7 @@ export default {
       selected: [],
       slider: "",
       description: {},
+      evdescription: {},
       inputFileModal: false,
       confirmModal: false,
       proceedMethod: Function
@@ -103,10 +118,18 @@ export default {
       homeService.desc.get(data => {
         this.description = data;
       });
+      homeService.evdesc.get(data => {
+        this.evdescription = data;
+      });
     },
 
     updateDesc() {
       homeService.desc.put(this.description._id, this.description, res => {
+        this.getDesc();
+      });
+    },
+    updateEvdesc() {
+      homeService.evdesc.put(this.evdescription._id, this.evdescription, res => {
         this.getDesc();
       });
     },

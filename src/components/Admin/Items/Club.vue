@@ -25,7 +25,8 @@
           </span>
         </div>
 
-        <textarea v-model="desc.text"></textarea>
+        <tinymce id="d1" v-model="desc.text"></tinymce>
+
       </div>
 
       <div class="adminSlider br">
@@ -127,10 +128,13 @@
     clubService
   } from "../../../service/api.js";
   import modal from "../../Modal";
+  import tinymce from 'vue-tinymce-editor'
+
 
   export default {
     components: {
-      modal
+      modal,
+      tinymce
     },
 
     data() {

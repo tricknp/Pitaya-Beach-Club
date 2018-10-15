@@ -2,7 +2,7 @@
   <main class="apartHotel__main">
 
     <Banner>
-      <img :src="`data:image/png;base64,${banner}`" class="banner__bg" slot="bg">
+      <img v-if="banner" :src="`data:image/png;base64,${banner}`" class="banner__bg" slot="bg">
       <div slot="content">
         <svg class="banner__content--icon" version="1.1" viewBox="0 0 470 470" xmlns="http://www.w3.org/2000/svg">
           <path d="m327.39 160.81c-3.292 2.515-3.922 7.222-1.407 10.513 14.076 18.423 21.515 40.443 21.515 63.678 0 57.897-47.103 105-105 105s-105-47.103-105-105 47.103-105 105-105c23.235 0 45.255 7.439 63.679 21.516 3.29 2.515 7.998 1.885 10.513-1.407 2.515-3.291 1.885-7.998-1.407-10.513-21.061-16.091-46.23-24.596-72.785-24.596-66.168 0-120 53.832-120 120s53.832 120 120 120 120-53.832 120-120c0-26.555-8.505-51.724-24.596-72.784-2.514-3.291-7.22-3.922-10.512-1.407z"/>
@@ -16,16 +16,10 @@
 
      <div class="description__container">
        <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
-      <p class="description__container--text">
-          Com ambiente vibrante e moderno, o espaço gastronômico Pitaya proporciona aos hóspedes e visitantes uma experiência completa para seu paladar.
+     
+      <p ref="desc" class="description__container--text">
+          
       </p>
-
-      <p class="description__container--text">
-          Trazendo o que há de melhor na culinária, para todos os gostos.
-      </p>
-
-      <p class="description__container--text"> <b>Aberto ao público para almoço e jantar! </b> </p>
-
 
       <!-- <div class="divider"></div> -->
     </div>
@@ -36,33 +30,47 @@
 
 
 <script>
-
-import Banner from '../FixedComponents/Banner'
-import axios from 'axios'
-import url from '../_mixins/url'
+import Banner from "../FixedComponents/Banner";
+import url from "../_mixins/url";
+import { gastroService } from "../../service/api";
 
 export default {
-    components: { Banner },
+  components: { Banner },
 
-    data(){
-      return{
-        banner: ''
-      }
+  data() {
+    return {
+      banner: false,
+      desc: false
+    };
+  },
+
+  mixins: [url],
+
+  created() {
+    this.getBanner();
+    this.getDesc();
+  },
+
+  methods: {
+    getBanner() {
+      gastroService.banner.get(res => {
+        this.banner = res[0].img;
+      });
     },
-
-    mixins: [ url ],
-
-    created(){
-      this.getBanner()
+    getDesc() {
+      gastroService.desc.get(desc => {
+        this.desc = desc;
+        let nodes = this.createElementsFromHTML(desc.text);
+        nodes.forEach(element => {
+          this.$refs.desc.appendChild(element);
+        });
+      });
     },
-
-    methods:{
-      getBanner(){
-        axios.get(`${this.baseURL}gastro/banner`).then(res => {
-          this.banner = res.data[0].img
-        })
-      }
+    createElementsFromHTML(htmlString) {
+      var div = document.createElement("div");
+      div.innerHTML = htmlString.trim();
+      return div.childNodes;
     }
-
   }
+};
 </script>

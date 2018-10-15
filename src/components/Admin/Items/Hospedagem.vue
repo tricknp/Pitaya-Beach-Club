@@ -26,7 +26,8 @@
           </span>
         </div>
 
-        <textarea v-model="desc.text"></textarea>
+        <tinymce id="d1" v-model="desc.text"></tinymce>
+
       </div>
 
       <div class="adminSlider br bb">
@@ -71,12 +72,13 @@
       <h4 slot="header">Selecione uma foto para enviar.</h4>
       <div slot="content" class="modalInput">
         <input class="modalInput--input" placeholder="escolha sua foto" type="file" ref="eventImg" accept="image/x-png,image/jpeg,image/jpg">
+        Nome do Quarto?<input class="modalInput--input" type="test" v-model="modalData.name" placeholder="Quarto X">
         Possui Wifi?<input class="modalInput--input" type="test" v-model="modalData.wifi" placeholder="sim">
         Ar Condicionado?<input class="modalInput--input" type="text" v-model="modalData.air" placeholder="sim">
         Café?<input class="modalInput--input" type="text" v-model="modalData.coffee" placeholder="todas as manhãs">
         Cama?<input class="modalInput--input" type="text" v-model="modalData.cama" placeholder="casal">
         Ocupação Máxima?<input class="modalInput--input" type="text" v-model="modalData.maxOcupation" placeholder="2 pessoas">
-        Pernoite?<input class="modalInput--input" type="text" v-model="modalData.perNight" placeholder="sim">
+        Pernoite?<input class="modalInput--input" type="text" v-model="modalData.perNight" placeholder="99,99">
       </div>
       <div slot="footer">
         <div class="modalBtn">
@@ -119,10 +121,13 @@
     hospService
   } from "../../../service/api.js";
   import modal from "../../Modal";
+  import tinymce from 'vue-tinymce-editor'
+
 
   export default {
     components: {
-      modal
+      modal,
+      tinymce
     },
 
     data() {
@@ -176,8 +181,6 @@
       // =============================================================================
 
       addGallery() {
-      console.log('WTF');
-
         this.proceedMethod = this.postGallery;
         this.galleryModal = true;
       },

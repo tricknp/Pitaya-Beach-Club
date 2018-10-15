@@ -5,7 +5,7 @@
 
     <div class="garopaba-page">
       <Description />
-      <Gallery class="btt" />
+      <Gallery directory="/garopaba/slider" class="btt" />
     </div>
 
     <Footer />

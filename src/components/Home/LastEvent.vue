@@ -7,8 +7,8 @@
 
     <div class="last-event__text">
       <h2 class="last-event__text--title">Faça seu evento</h2>
-      <p class="last-event__text--paragraph">Um complexo completo, com hotel, club e praça gastronômica</p>
-      <p class="last-event__text--paragraph">Estrutura de palco e projeção, permitindo a realização de casamentos, aniversários e eventos corporativos, para até mil pessoas.</p>
+      <p ref="desc" class="last-event__text--paragraph"></p>
+      <p class="last-event__text--paragraph"></p>
     </div>
 
     <router-link :to="{ name: 'Club' }">
@@ -20,9 +20,28 @@
 
 <script>
 import Card from './Card'
+import {homeService} from '../../service/api'
 
 export default {
-  components: { Card }
+  components: { Card },
+  created() {
+    this.getDesc();
+  },
+  methods: {
+    getDesc() {
+      homeService.evdesc.get(desc => {
+        let nodes = this.createElementsFromHTML(desc.text);
+        nodes.forEach(element => {
+          this.$refs.desc.appendChild(element);
+        });
+      });
+    },
+    createElementsFromHTML(htmlString) {
+      var div = document.createElement("div");
+      div.innerHTML = htmlString.trim();
+      return div.childNodes;
+    }
+  }
 }
 </script>
 

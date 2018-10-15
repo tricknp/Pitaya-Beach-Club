@@ -34,7 +34,7 @@ export default {
     return{
       items: [
         { name: 'Home',        route: 'Home',        active: true  },
-        { name: 'Hospedagem', route: 'ApartHotel',   active: false },
+        { name: 'Hospedagem',  route: 'ApartHotel',  active: false },
         { name: 'Club',        route: 'Club',        active: false },
         { name: 'Gastronomia', route: 'Gastronomy',  active: false },
         { name: 'Shopping',    route: 'Shopping',    active: false },
