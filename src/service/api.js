@@ -1,8 +1,8 @@
 // This module should center all cruds calls and configs
 
 // CONFIGs
-//export const baseUrl = 'http://pitayabeachapi.herokuapp.com';
-export const baseUrl= 'http://localhost:3000';
+export const baseUrl = 'http://pitayabeachapi.herokuapp.com';
+//export const baseUrl= 'http://localhost:3000';
 
 export const endPoints = {
 
