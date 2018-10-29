@@ -1,11 +1,12 @@
 <template>
   <section class="last-event">
 
+    
     <h1 class="last-event__title">Proximo Evento</h1>
 
     <Card />
 
-    <div class="last-event__text">
+    <div class="last-event__text gs">
       <h2 class="last-event__text--title">Faça seu evento</h2>
       <p ref="desc" class="last-event__text--paragraph"></p>
       <p class="last-event__text--paragraph"></p>
@@ -47,4 +48,5 @@ export default {
 
 <style lang="scss" scoped>
   .br { margin-top: 1em;}
+ // .last-event__title { margin-top:  10% !important;  }
 </style>

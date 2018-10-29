@@ -11,7 +11,7 @@
     font-size: $title;
     color: $pink;
     text-transform: uppercase;
-    // margin-top: 5%;
+    margin-top: 5%;
   }
 
   &__box
@@ -92,10 +92,14 @@
 
     &--paragraph
     {
-      &:nth-child(2) { margin-top: 8% }
+      //&:nth-child(2) { margin-top: 8% }
       font-size: $text;
       margin-top: 1em;
       color: rgba(0, 0, 0, .6);
     }
   }
+}
+
+.bbb{
+  margin-top: 10%;
 }

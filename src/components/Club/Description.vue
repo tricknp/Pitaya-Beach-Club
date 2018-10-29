@@ -21,14 +21,14 @@
      <div class="description__container br">
        <!-- <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo"> -->
        <h1 class="weDesign">We design your vibe</h1>
-
+<!--
       <p class="description__container--text">
         Esqueça os rotulos do lado de fora e junte-se a nós.<br>
       </p>
 
       <p class="description__container--text">
           Deixe que a fruta do dragão guie os seus sentimentos.
-      </p>
+      </p> -->
 
 
       <!-- <div class="divider"></div> -->

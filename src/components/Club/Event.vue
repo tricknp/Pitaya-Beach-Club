@@ -2,7 +2,7 @@
 <section class="events-club">
 
   <div class="events-club__main">
-    <h1 class="events-club__main--title">Proximos Eventos</h1>
+    <h1 class="events-club__main--title">Proximo Evento</h1>
     <Card />
     <!-- <div class="divider"></div> -->
   </div>

@@ -15,14 +15,18 @@
 
 
 @media( max-width: 1440px ){
-  .description--img { width: 8.5em}
+  .description--img { width: 10.5em;}
   .description__container
   {
-    width: 40%;
+    width: 50%;
+    
     &--text
     {
-      &:nth-child(2){ margin-top: 6.5%; }
+      &:nth-child(2){ margin-top: .0%; }
+      &:nth-child(5){ margin-top: 0%; }
     }
+
+    
     .divider{ margin-top: 8%; }
   }
   .main-footer
@@ -46,6 +50,8 @@
     width: 35%;
     height: 13em;
   }
+  
+  .gallery { margin-top: 3% }
 
 }
 
@@ -100,7 +106,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: red;
   }
 
   .justify { text-align: center;}

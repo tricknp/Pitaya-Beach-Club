@@ -21,15 +21,14 @@
     </Banner>
 
 
-    <div class="dc">
-      <img src="../../../static/images/logo_beach_club-01.png" class="description--img">
-
-      <div class="description__container justify">
-        <p ref="desc" class="description__container--text">
-        </p>
-
-
-      </div>
+     <div class="description__container">
+       <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo">
+      <br>
+      <p ref="desc" class="description__container--text">
+          
+      </p>
+      <br>
+      <!-- <div class="divider"></div> -->
     </div>
     <!-- <div class="divider"></div> -->
 

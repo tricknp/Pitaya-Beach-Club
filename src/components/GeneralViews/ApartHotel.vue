@@ -4,7 +4,7 @@
     <Header />
 
     <div class="apartHotel-page">
-      <Description />
+    <!--  <Description /> -->
       <Rooms />
       <Galery directory="/apart/gallery" />
     </div>

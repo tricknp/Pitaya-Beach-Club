@@ -6,7 +6,8 @@
     <div class="gastronomy-page">
       <Description />
     </div>
-    <gallery directory="/gastro/slider" class="br" />
+   
+       <gallery directory="/gastro/slider" class="gg" />
 
     <Footer />
 
@@ -42,6 +43,6 @@ export default {
   }
 
   .gg{
-    margin-top: 10%;
+    margin-top: -5%;
   }
 </style>

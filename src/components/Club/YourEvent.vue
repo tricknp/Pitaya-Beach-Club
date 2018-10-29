@@ -31,7 +31,7 @@
       <div class="yourEvent__card__image">
         <img src="https://static.wixstatic.com/media/944141_e1df905f970d427281426295f3c77fef~mv2_d_4800_3200_s_4_2.jpg/v1/fill/w_630,h_420,al_c,q_80,usm_0.66_1.00_0.01/944141_e1df905f970d427281426295f3c77fef~mv2_d_4800_3200_s_4_2.webp" class="yourEvent__card__image--img">
       </div>
-      <div class="" class="yourEvent__card__content">
+      <div class="yourEvent__card__content">
         <h2 class="yourEvent__card__content--name">Aniversários</h2>
         <p class="yourEvent__card__content--desc">Faça sua festa de aniversário no Pitaya Hotel, uma estrutura preparada com palco, sonorização, projeção e espaço para receber até 1000 convidados. Celebre a vida em grande estilo!</p>
       </div>
