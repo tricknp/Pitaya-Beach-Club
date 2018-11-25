@@ -15,7 +15,7 @@
     </nav>
 
     <div class="rww">
-      <button v-if="isLoged" clauss="head__btn" @click="logoff"> Sair </button>
+      <button v-if="isLoged" class="head__btn" @click="logoff"> Sair </button>
       <button class="head__btn">Book Now</button>
       <div class="hamburguer" @click="activeMenu">
         <div class="line line--top"></div>
