@@ -96,3 +96,13 @@
   }
 
 }
+
+
+.rww
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  button{  margin-right: 1em }
+}

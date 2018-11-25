@@ -9,12 +9,12 @@
       <router-link v-for="(item, index) in items" :key="index" :to="{ name: item.route }" class="head__items--item">
         <div class="active-item" @click="activeItem(index)">
           <span>{{item.name}}</span>
-          <span :class="{mark: item.active}"></span>
+          <!--<span :class="{mark: item.active}"></span>-->
         </div>
       </router-link>
     </nav>
 
-    <div class="rw">
+    <div class="rww">
       <button v-if="isLoged" clauss="head__btn" @click="logoff"> Sair </button>
       <button class="head__btn">Book Now</button>
       <div class="hamburguer" @click="activeMenu">

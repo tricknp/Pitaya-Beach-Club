@@ -6,7 +6,7 @@
 
     <Card />
 
-    <div class="last-event__text gs">
+    <div class="last-event__text">
       <h2 class="last-event__text--title">Faça seu evento</h2>
       <p ref="desc" class="last-event__text--paragraph"></p>
       <p class="last-event__text--paragraph"></p>

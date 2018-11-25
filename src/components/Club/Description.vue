@@ -21,6 +21,7 @@
      <div class="description__container br">
        <!-- <img src="../../../static/images/logo_beach_club-01.png" class="pitaya-logo"> -->
        <h1 class="weDesign">We design your vibe</h1>
+       <br><br>
 <!--
       <p class="description__container--text">
         Esqueça os rotulos do lado de fora e junte-se a nós.<br>
